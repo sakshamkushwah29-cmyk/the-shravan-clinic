@@ -1,0 +1,774 @@
+/*Primary Colors*/
+/*Secondary Colors*/
+/*Form Colors*/
+/*Gradients*/
+/*Transitions*/
+/*Font Size*/
+/*Radius*/
+/*Spacing*/
+/*Container*/
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css");
+@import url("https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css");
+@import url("https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css");
+.pageMargin {
+  padding-top: 6rem !important;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle, #ffffff, #fefefe, #fcfdfd, #fbfcfc, #fafbfa, #f9fafa, #f8f9fa, #f9f8f9, #f9f7f8, #f9f7f8, #f8f6f7, #f8f6f6);
+}
+
+.arabic {
+  font-family: "Noto Kufi Arabic", sans-serif !important;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.section {
+  padding: 0 1.266rem;
+  z-index: 2;
+}
+@media (min-width: 568px) {
+  .section {
+    padding: 0 2.441rem;
+  }
+}
+@media (min-width: 1024px) {
+  .section {
+    padding: 0 3.815rem;
+  }
+}
+@media (min-width: 1800px) {
+  .section {
+    padding: 0 4.768rem;
+  }
+}
+
+.sectionMargin {
+  margin: 0 1rem;
+}
+@media (min-width: 360px) {
+  .sectionMargin {
+    margin: 0 1.5rem;
+  }
+}
+@media (min-width: 568px) {
+  .sectionMargin {
+    margin: 0 2.441rem;
+  }
+}
+@media (min-width: 768px) {
+  .sectionMargin {
+    margin: 0 3.052rem;
+  }
+}
+@media (min-width: 1024px) {
+  .sectionMargin {
+    margin: 0 3.815rem;
+  }
+}
+@media (min-width: 1280px) {
+  .sectionMargin {
+    margin: 0 4.768rem;
+  }
+}
+@media (min-width: 1800px) {
+  .sectionMargin {
+    margin: 0 5.96rem;
+  }
+}
+
+.sectionSpace {
+  padding-bottom: 2.441rem;
+  padding-top: 2.441rem;
+}
+@media (min-width: 568px) {
+  .sectionSpace {
+    padding-top: 3.052rem;
+    padding-bottom: 3.052rem;
+  }
+}
+@media (min-width: 768px) {
+  .sectionSpace {
+    padding-top: 3.815rem;
+    padding-bottom: 3.815rem;
+  }
+}
+@media (min-width: 1280px) {
+  .sectionSpace {
+    padding-top: 4.768rem;
+    padding-bottom: 4.768rem;
+  }
+}
+
+.sectionSpaceT {
+  padding-top: 2.441rem;
+}
+@media (min-width: 568px) {
+  .sectionSpaceT {
+    padding-top: 3.052rem;
+  }
+}
+@media (min-width: 768px) {
+  .sectionSpaceT {
+    padding-top: 3.815rem;
+  }
+}
+@media (min-width: 1800px) {
+  .sectionSpaceT {
+    padding-top: 4.768rem;
+  }
+}
+
+.sectionSpaceB {
+  padding-bottom: 2.441rem;
+}
+@media (min-width: 568px) {
+  .sectionSpaceB {
+    padding-bottom: 3.052rem;
+  }
+}
+@media (min-width: 768px) {
+  .sectionSpaceB {
+    padding-bottom: 3.815rem;
+  }
+}
+@media (min-width: 1800px) {
+  .sectionSpaceB {
+    padding-bottom: 4.768rem;
+  }
+}
+
+.innerSection {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+}
+
+.heading {
+  margin: 0;
+  color: #0b0b0b;
+  font-weight: 300;
+}
+
+.subHeading {
+  margin: 0;
+  display: block;
+  color: #242323;
+}
+
+.color1 {
+  color: #038e83;
+}
+
+.color2 {
+  color: #08998d;
+}
+
+#mainContainer {
+  margin: 0 auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  transition: all 1s cubic-bezier(0.37, 0, 0.63, 1);
+  padding-bottom: 4.768rem;
+  /* Header Section*/
+}
+@media (min-width: 768px) {
+  #mainContainer {
+    padding-bottom: 0;
+    padding-left: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  #mainContainer {
+    padding-left: 0;
+  }
+}
+#mainContainer .headerIntro {
+  height: 4rem;
+}
+#mainContainer .headerMain {
+  height: 6rem;
+}
+#mainContainer #headerSection {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  transition: all 0.5s cubic-bezier(0.37, 0, 0.63, 1);
+}
+@media (min-width: 1024px) {
+  #mainContainer #headerSection {
+    height: 90px;
+  }
+}
+#mainContainer #headerSection .logoDiv {
+  width: 90px;
+  display: block;
+  z-index: 10;
+}
+@media (min-width: 768px) {
+  #mainContainer #headerSection .logoDiv {
+    width: 110px;
+  }
+}
+#mainContainer #headerSection .menuSectionIntro {
+  transform: none !important;
+}
+#mainContainer #headerSection #menuSection {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  overflow-y: auto;
+  transition: all 0.3s ease-in;
+  transform: translateX(-100%);
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #menuSection {
+    position: relative;
+    width: auto;
+    height: 100%;
+    align-items: flex-start;
+    overflow: unset;
+    background-color: #ffffff;
+    transform: none;
+    padding: 0;
+  }
+}
+#mainContainer #headerSection #menuSection .menuContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #menuSection .menuContainer {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100%;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #menuSection .menuContainer .language-style {
+    visibility: hidden;
+  }
+}
+#mainContainer #headerSection #menuSection .menuContainer .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b0b0b;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.266rem;
+  font-weight: 300;
+  padding: 1rem;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #menuSection .menuContainer .menu {
+    height: 100%;
+    color: #0b0b0b;
+    font-size: 0.889rem;
+    font-weight: 500;
+    padding: 1rem 0.5rem;
+  }
+}
+#mainContainer #headerSection #menuSection .menuContainer .menu:hover {
+  color: #038e83;
+}
+#mainContainer #headerSection #menuSection .menuContainer .mainMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b0b0b;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.266rem;
+  font-weight: 300;
+  padding: 1rem;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #menuSection .menuContainer .mainMenu {
+    height: 100%;
+    color: #0b0b0b;
+    font-size: 0.889rem;
+    font-weight: 500;
+    padding: 1rem 0.5rem;
+  }
+}
+#mainContainer #headerSection #menuSection .menuContainer .mainMenu img {
+  width: 25px;
+  opacity: 0.5;
+}
+#mainContainer #headerSection #menuSection .menuContainer .mainMenu:hover {
+  color: #038e83;
+}
+#mainContainer #headerSection #menuSection .menuContainer .menuDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #menuSection .menuContainer .menuDiv {
+    height: auto;
+  }
+}
+#mainContainer #headerSection #menuSection .menuContainer .menuDiv:hover .mainMenu {
+  color: #038e83;
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #menuSection .menuContainer .menuDiv:hover .subMenu {
+    height: 320px;
+  }
+}
+#mainContainer #headerSection #menuSection .menuContainer .menuDiv .subMenuIntro {
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #menuSection .menuContainer .menuDiv .subMenuIntro {
+    flex-direction: row !important;
+  }
+}
+#mainContainer #headerSection #menuSection .menuContainer .menuDiv .subMenuIntro .menuCloseBg {
+  display: block !important;
+}
+#mainContainer #headerSection #menuSection .menuContainer .menuDiv .subMenu {
+  width: 100vw;
+  height: 0;
+  display: none;
+  background-color: #038e83;
+  border-top: none;
+  overflow: hidden;
+  text-align: left;
+  transition: all 0.5s cubic-bezier(0.37, 0, 0.63, 1);
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #menuSection .menuContainer .menuDiv .subMenu {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    height: 0;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0 0 15px 15px;
+    box-shadow: rgba(93, 64, 50, 0.11) 0px 50px 100px -20px, rgba(31, 9, 0, 0.158) 0px 30px 60px -30px;
+  }
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #menuSection .menuContainer .menuDiv .subMenu .menuCloseBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    display: none;
+  }
+}
+#mainContainer #headerSection #menuSection .menuContainer .menuDiv .subMenu a {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  color: #ffffff;
+  font-family: "Barlow", sans-serif;
+  font-size: 0.889rem;
+  font-weight: 300;
+  padding: 1rem;
+  border-right: 1px solid #499b86;
+  border-bottom: 1px solid #499b86;
+  z-index: 2;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+@media (min-width: 568px) {
+  #mainContainer #headerSection #menuSection .menuContainer .menuDiv .subMenu a {
+    width: 33.333%;
+  }
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #menuSection .menuContainer .menuDiv .subMenu a {
+    width: 50%;
+  }
+}
+#mainContainer #headerSection #menuSection .menuContainer .menuDiv .subMenu a:hover {
+  bottom: 0;
+  color: #ffffff;
+  background-color: #038e83;
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #menuSection .menuContainer .menuDiv .subMenu a:hover {
+    background-color: #08998d;
+  }
+}
+#mainContainer #headerSection #menuIcon {
+  width: 3rem;
+  height: 3rem;
+  z-index: 102;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  transition: all 0.7s ease-in;
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #menuIcon {
+    display: none;
+  }
+}
+#mainContainer #headerSection #menuIcon .menuIconBar {
+  width: 100%;
+  height: 4px;
+  margin: 3px 0;
+  border-radius: 15px;
+  background-color: #0b0b0b;
+  transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+}
+#mainContainer #headerSection #menuIcon .menuBarOne {
+  transform: none;
+  width: 100%;
+}
+#mainContainer #headerSection #menuIcon .menuBarOneIntro {
+  transform: rotate(45deg) translate(0px, 0.5px);
+  margin: 0 !important;
+  width: 80%;
+}
+#mainContainer #headerSection #menuIcon .menuBarCenter {
+  opacity: 1;
+  transform: none;
+  transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+}
+#mainContainer #headerSection #menuIcon .menuBarCenterIntro {
+  opacity: 0 !important;
+  transform: translateX(10px);
+}
+#mainContainer #headerSection #menuIcon .menuBarTwo {
+  transform: none;
+}
+#mainContainer #headerSection #menuIcon .menuBarTwoIntro {
+  transform: rotate(-45deg) translate(2px, -3.5px);
+  margin: 0 !important;
+  width: 80%;
+}
+#mainContainer #headerSection #tabMenu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 101;
+  width: 100vw;
+  height: 4rem;
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.034) 0px -1px 2px 0px;
+  transform: all 0.3s ease-in;
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #tabMenu {
+    position: relative;
+    width: auto;
+    height: auto;
+    overflow: unset;
+    transform: none;
+    border: none;
+    box-shadow: none;
+  }
+}
+#mainContainer #headerSection #tabMenu .contactMenu {
+  display: flex;
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #tabMenu .contactMenu {
+    display: none;
+    flex-direction: column;
+  }
+}
+#mainContainer #headerSection #tabMenu .contactMenu #callBtn {
+  background-color: #038e83;
+  background-color: linear-gradient(to right top, #00aea0, #01a89a, #01a295, #029c8f, #02968a, #029186, #028d82, #02887e, #01847a, #018076, #007c73, #00786f);
+}
+#mainContainer #headerSection #tabMenu .contactMenu a {
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #ebedf3;
+}
+@media (min-width: 568px) {
+  #mainContainer #headerSection #tabMenu .contactMenu a {
+    width: 4rem;
+  }
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #tabMenu .contactMenu a {
+    width: auto;
+    border: none;
+    justify-content: flex-end;
+  }
+  #mainContainer #headerSection #tabMenu .contactMenu a:nth-child(1) {
+    margin-bottom: 0.25rem;
+  }
+}
+#mainContainer #headerSection #tabMenu .contactMenu a img {
+  width: 20px;
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #tabMenu .contactMenu a img {
+    display: none;
+  }
+}
+#mainContainer #headerSection #tabMenu .contactMenu a span {
+  display: none;
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #tabMenu .contactMenu a span {
+    display: block;
+  }
+}
+#mainContainer #headerSection #tabMenu .contactNumber {
+  display: none;
+  margin: 0;
+  font-size: 0.9rem;
+  align-content: center;
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #tabMenu .contactNumber {
+    display: block;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    color: #0b0b0b;
+  }
+  #mainContainer #headerSection #tabMenu .contactNumber:hover {
+    color: #038e83;
+  }
+}
+#mainContainer #headerSection #tabMenu .chat {
+  width: 3rem;
+  margin: 0;
+  display: flex;
+  align-content: center;
+  color: #0b0b0b;
+  border: none;
+}
+@media (min-width: 568px) {
+  #mainContainer #headerSection #tabMenu .chat {
+    width: 4rem;
+  }
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #tabMenu .chat {
+    width: auto;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin-left: auto;
+  }
+}
+#mainContainer #headerSection #tabMenu .chat span {
+  display: none;
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #tabMenu .chat span {
+    display: block;
+  }
+}
+#mainContainer #headerSection #tabMenu .chat img {
+  width: 30px;
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #tabMenu .chat img {
+    width: 30px;
+  }
+}
+#mainContainer #headerSection #tabMenu .btn1 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: #0b0b0b;
+  font-size: 0.889rem;
+  white-space: nowrap;
+  background: none;
+  border: none;
+  border-left: 1px solid #ebedf3;
+  border-radius: 0;
+}
+@media (min-width: 1280px) {
+  #mainContainer #headerSection #tabMenu .btn1 {
+    color: #ffffff;
+    margin-left: 1rem;
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    border: 1px solid #038e83;
+    background: linear-gradient(to right top, #00aea0, #01a89a, #01a295, #029c8f, #02968a, #029186, #028d82, #02887e, #01847a, #018076, #007c73, #00786f);
+  }
+}
+#mainContainer #headerSection #tabMenu .btn1:hover {
+  color: #0b0b0b;
+}
+@media (min-width: 1024px) {
+  #mainContainer #headerSection #tabMenu .btn1:hover {
+    color: #ffffff;
+  }
+}
+#mainContainer #footerSection {
+  padding-top: 4.768rem;
+  padding-bottom: 2.441rem;
+  background-color: #fdfbfa;
+}
+#mainContainer #footerSection #footerMain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#mainContainer #footerSection #footerMain .footerMenu {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 2.441rem;
+}
+@media (min-width: 360px) {
+  #mainContainer #footerSection #footerMain .footerMenu {
+    text-align: left;
+    width: 50%;
+  }
+}
+@media (min-width: 568px) {
+  #mainContainer #footerSection #footerMain .footerMenu {
+    width: 33%;
+  }
+}
+@media (min-width: 768px) {
+  #mainContainer #footerSection #footerMain .footerMenu {
+    width: 25%;
+  }
+}
+#mainContainer #footerSection #footerMain .footerMenu .imgDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 360px) {
+  #mainContainer #footerSection #footerMain .footerMenu .imgDiv {
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+#mainContainer #footerSection #footerMain .footerMenu .imgDiv img {
+  width: 100px;
+}
+@media (min-width: 768px) {
+  #mainContainer #footerSection #footerMain .footerMenu .imgDiv img {
+    width: 130px;
+  }
+}
+#mainContainer #footerSection #footerMain .footerMenu .title {
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 1rem;
+  color: #038e83;
+}
+#mainContainer #footerSection #footerMain .footerMenu a {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+#mainContainer #footerSection #footerMain .footerMenu a:hover {
+  color: #08998d;
+}
+#mainContainer #footerSection #footerMain .footerMenu p {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+#mainContainer #footerSection #footerMain .footerMenu p:hover {
+  color: #08998d;
+}
+#mainContainer #footerSection #footerBottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ebedf3;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  #mainContainer #footerSection #footerBottom {
+    flex-direction: row;
+    padding: 1rem 0;
+  }
+}
+#mainContainer #footerSection #footerBottom .text {
+  margin: 0;
+  color: #5d5e5f;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  #mainContainer #footerSection #footerBottom .text {
+    margin-bottom: 0;
+  }
+}
+#mainContainer #footerSection #footerBottom .smDiv {
+  width: auto !important;
+  display: flex;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  #mainContainer #footerSection #footerBottom .smDiv {
+    margin-bottom: 0;
+  }
+}
+#mainContainer #footerSection #footerBottom .smDiv a {
+  display: inline-block;
+  width: 25px;
+  margin-left: 0.75rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+#mainContainer #footerSection #footerBottom .smDiv a:hover {
+  opacity: 0.5;
+}
+#mainContainer #footerSection #footerBottom .smDiv a img {
+  cursor: pointer;
+}
