@@ -249,28 +249,42 @@
       }
     </style>
     <script>
-      function openInquiryDrawer() {
-        if (typeof $ !== 'undefined') {
-          $("body").toggleClass("bodyIntro");
-          $("#mainContainer").toggleClass("mainContainerIntro");
-          $("#popupFormSection").toggleClass("popupFormSectionIntro");
-          $(".formActionText").toggleClass("closeForm");
-        } else {
-          document.body.classList.toggle("bodyIntro");
+      function toggleInquiryDrawer(openState) {
+        var isCurrentlyOpen = document.body.classList.contains("bodyIntro");
+        var willOpen = (typeof openState === 'boolean') ? openState : !isCurrentlyOpen;
+
+        if (willOpen) {
+          document.body.classList.add("bodyIntro");
           var mc = document.getElementById("mainContainer");
-          if (mc) mc.classList.toggle("mainContainerIntro");
+          if (mc) mc.classList.add("mainContainerIntro");
           var pf = document.getElementById("popupFormSection");
-          if (pf) pf.classList.toggle("popupFormSectionIntro");
+          if (pf) pf.classList.add("popupFormSectionIntro");
+          var ab = document.getElementById("bannerArrowBtn");
+          if (ab) ab.classList.add("isOpen");
+          setTimeout(function() {
+            var n = document.getElementById("name");
+            if (n) n.focus();
+          }, 450);
+        } else {
+          document.body.classList.remove("bodyIntro");
+          var mc = document.getElementById("mainContainer");
+          if (mc) mc.classList.remove("mainContainerIntro");
+          var pf = document.getElementById("popupFormSection");
+          if (pf) pf.classList.remove("popupFormSectionIntro");
+          var ab = document.getElementById("bannerArrowBtn");
+          if (ab) ab.classList.remove("isOpen");
         }
       }
+      function openInquiryDrawer() { toggleInquiryDrawer(true); }
+      function closeInquiryDrawer() { toggleInquiryDrawer(false); }
     </script>
      <section id="popupFormSection" class="" method="post" action="">
     <form id="popupForm" action="" method="post">
       <div id="popupFormWrapper" class="contactForm" bis_skin_checked="1">
         <div class="slide section" bis_skin_checked="1">
           <h2 class="heading">
-            Inquiry
-            <span class="color1"> Now</span>
+            Let me
+            <span class="color1"> Help you.</span>
           </h2>
           <div class="formDiv" bis_skin_checked="1">
             <div class="inputDiv lgDiv" bis_skin_checked="1">
@@ -278,14 +292,14 @@
               <span class="messageBox" mode="error"></span>
             </div>
             <div class="inputDiv lgDiv" bis_skin_checked="1">
-              <input type="text" id="mobile" name="mobile" placeholder="Enter Your Contact Number" contatctFormField required="" />
+              <input type="tel" id="mobile" name="mobile" placeholder="Enter Your Contact Number" contatctFormField required="" />
               <span class="messageBox" mode="error"></span>
             </div>
             
             <div class="btnDiv" bis_skin_checked="1">
-              <a href="javascript:void(0);" onclick="openInquiryDrawer(); return false;" class="formAction btn btn2 lgBtn" style="cursor: pointer;">Close</a>
+              <a href="javascript:void(0);" onclick="closeInquiryDrawer(); return false;" class="formAction formCloseBtn btn btn2 lgBtn" style="cursor: pointer;">Close</a>
               <button type="submit" id="contactSubmit" class="btn btn1 lgBtn">
-                Send Now <span style="display: none;color:white;" class="loader"></span>
+                Send <span style="display: none;color:white;" class="loader"></span>
               </button>
             </div>
           </div>
@@ -1155,6 +1169,14 @@
             </a>
           </div>
 
+          <a href="javascript:void(0);" class="formAction bannerArrowBtn" id="bannerArrowBtn" aria-label="Open Let Me Help You form" onclick="toggleInquiryDrawer(); return false;">
+            <span class="arrowCircle">
+              <svg class="arrowSvg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
         </div>
       </section>
 
@@ -1263,12 +1285,35 @@
     }
 
     $(document).ready(function () {
-      $(document).on("click", ".formAction", function (e) {
+      $(document).on("click", ".bannerArrowBtn", function (e) {
         e.preventDefault();
-        $("body").toggleClass("bodyIntro");
-        $("#mainContainer").toggleClass("mainContainerIntro");
-        $("#popupFormSection").toggleClass("popupFormSectionIntro");
-        $(".formActionText").toggleClass("closeForm");
+        toggleInquiryDrawer();
+      });
+
+      $(document).on("click", ".formAction:not(.bannerArrowBtn)", function (e) {
+        e.preventDefault();
+        toggleInquiryDrawer();
+      });
+
+      $(document).on("click", ".formCloseBtn", function (e) {
+        e.preventDefault();
+        closeInquiryDrawer();
+      });
+
+      // Close when clicking outside drawer while open
+      $(document).on("click", function (e) {
+        if ($("body").hasClass("bodyIntro")) {
+          if (!$(e.target).closest("#popupFormSection, .formAction, .bannerArrowBtn").length) {
+            closeInquiryDrawer();
+          }
+        }
+      });
+
+      // Close on Esc key
+      $(document).on("keydown", function (e) {
+        if (e.key === "Escape" && $("body").hasClass("bodyIntro")) {
+          closeInquiryDrawer();
+        }
       });
 
       $(".optionList").on('click', function (e) {
