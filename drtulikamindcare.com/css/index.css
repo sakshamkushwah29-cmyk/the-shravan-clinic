@@ -949,7 +949,7 @@
   margin: 0 auto;
   margin-top: 1.8rem;
   padding: 0.95rem 2.6rem;
-  background: linear-gradient(135deg, #116ab2 0%, #026b63 100%);
+  background: linear-gradient(135deg, #116ab2 0%, #0a4a84 100%);
   color: #ffffff !important;
   border-radius: 50px;
   font-size: 1.05rem;
@@ -959,7 +959,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  box-shadow: 0 8px 24px rgba(3, 142, 131, 0.3);
+  box-shadow: 0 8px 24px rgba(17, 106, 178, 0.3);
   cursor: pointer;
   transform: none !important;
   width: auto !important;
@@ -977,9 +977,9 @@
 }
 #bannerSection .bannerInquiryBtn:hover,
 #bannerSection a.formAction.bannerInquiryBtn:hover {
-  background: linear-gradient(135deg, #04a599 0%, #116ab2 100%);
+  background: linear-gradient(135deg, #116ab2 0%, #0a4a84 100%);
   transform: translateY(-3px) scale(1.02) !important;
-  box-shadow: 0 12px 30px rgba(3, 142, 131, 0.45);
+  box-shadow: 0 12px 30px rgba(17, 106, 178, 0.45);
   color: #ffffff !important;
 }
 #bannerSection .bannerInquiryBtn:active,
@@ -997,10 +997,10 @@
 }
 @keyframes inquiryGlow {
   0%, 100% {
-    box-shadow: 0 8px 24px rgba(3, 142, 131, 0.3);
+    box-shadow: 0 8px 24px rgba(17, 106, 178, 0.3);
   }
   50% {
-    box-shadow: 0 8px 30px rgba(3, 142, 131, 0.55);
+    box-shadow: 0 8px 30px rgba(17, 106, 178, 0.55);
   }
 }
 
@@ -1639,7 +1639,7 @@
 }
 #serviceWallSection .wallContentWrapper .imageDiv .contents {
   padding: 1rem;
-  background: linear-gradient(to right top, #00aea0, #01a89a, #01a295, #029c8f, #02968a, #029186, #028d82, #02887e, #01847a, #018076, #007c73, #00786f);
+  background: linear-gradient(to right top, #1a7ac4, #1874bc, #166eb4, #1468ac, #1262a4, #105c9c, #0e5694, #0c508c, #0a4a84, #08447c, #063e74, #04386c);
 }
 @media (min-width: 768px) {
   #serviceWallSection .wallContentWrapper .imageDiv .contents {

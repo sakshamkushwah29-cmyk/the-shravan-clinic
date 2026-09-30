@@ -50,7 +50,7 @@
 }
 #clinicWallSection .wallContentWrapper .imageDiv .contents {
   padding: 1rem;
-  background: linear-gradient(to right top, #00aea0, #01a89a, #01a295, #029c8f, #02968a, #029186, #028d82, #02887e, #01847a, #018076, #007c73, #00786f);
+  background: linear-gradient(to right top, #1a7ac4, #1874bc, #166eb4, #1468ac, #1262a4, #105c9c, #0e5694, #0c508c, #0a4a84, #08447c, #063e74, #04386c);
   border-radius: 0 0 15px 15px;
 }
 @media (min-width: 768px) {
