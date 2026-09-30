@@ -334,9 +334,9 @@
 
 .btn1 {
   color: #ffffff;
-  background-color: #038e83;
+  background-color: #116ab2;
   background: linear-gradient(to right top, #00aea0, #01a89a, #01a295, #029c8f, #02968a, #029186, #028d82, #02887e, #01847a, #018076, #007c73, #00786f);
-  border: 1px solid #038e83;
+  border: 1px solid #116ab2;
 }
 .btn1 i {
   color: #e0e0e0;
@@ -346,9 +346,9 @@
 }
 
 .btn2 {
-  color: #038e83;
+  color: #116ab2;
   background-color: #ffffff;
-  border: 1px solid #038e83;
+  border: 1px solid #116ab2;
 }
 .btn2:hover {
   transform: scale(0.98) translateY(5px);
@@ -357,9 +357,9 @@
 .btn3 {
   color: #ffffff;
   font-weight: 400;
-  background-color: #08998d;
+  background-color: #0e5a96;
   background: linear-gradient(to left bottom, #fffcf6, #fffcf5, #fffbf3, #fffbf2, #fffaf0, #fff9ee, #fff8eb, #fff7e9, #fff6e5, #fff5e1, #fff4de, #fff3da);
-  border: 1px solid #08998d;
+  border: 1px solid #0e5a96;
   overflow: auto;
 }
 .btn3:hover {
@@ -367,9 +367,9 @@
 }
 
 .btn4 {
-  color: #038e83;
+  color: #116ab2;
   background-color: #ffffff;
-  border: 1px solid #038e83;
+  border: 1px solid #116ab2;
 }
 .btn4:hover {
   color: #0b0b0b;
@@ -382,18 +382,18 @@
   border: 1px solid #ebedf3;
 }
 .btn5:hover {
-  color: #08998d;
+  color: #0e5a96;
   background-color: #fdfbfa;
   border: 1px solid #ebedf3;
 }
 
 .btn6 {
   color: #ffffff;
-  background-color: #038e83;
+  background-color: #116ab2;
   border: 1px solid #ebedf3;
 }
 .btn6:hover {
-  color: #08998d;
+  color: #0e5a96;
   background-color: #fdfbfa;
   border: 1px solid #ebedf3;
 }
@@ -414,10 +414,10 @@
   color: #ffffff;
   font-weight: 500;
   border: 1px solid #ebedf3;
-  background: #08998d;
+  background: #0e5a96;
 }
 .iconBtn1::before {
-  background: #08998d;
+  background: #0e5a96;
 }
 .iconBtn1 span i {
   margin: 0;
@@ -433,7 +433,7 @@
   background: #fffcf6;
 }
 .iconBtn2::before {
-  background: #08998d;
+  background: #0e5a96;
 }
 .iconBtn2 span i {
   margin: 0;
@@ -443,7 +443,7 @@
 }
 
 .iconBtn3 {
-  color: #08998d;
+  color: #0e5a96;
   font-weight: 500;
   border: 1px solid #fdfbfa;
   background: #fdfbfa;
@@ -459,7 +459,7 @@
 }
 
 .iconBtn4 {
-  color: #08998d;
+  color: #0e5a96;
   font-weight: 500;
   border: 1px solid #ebedf3;
   background: #ffffff;
@@ -908,7 +908,7 @@ form input[type=radio]:checked + label {
   }
   form input[type=checkbox]:checked + label::before,
 form input[type=radio]:checked + label::before {
-    border: 2px solid #038e83 !important;
+    border: 2px solid #116ab2 !important;
     box-shadow: 2px 4px 16px rgba(2, 80, 143, 0.16) !important;
   }
   form input[type=checkbox]:checked + label span,
@@ -1128,11 +1128,11 @@ form .passwordShowIconDiv i:hover {
   border-bottom: 1px solid #242323;
 }
 .select2-container .select2-dropdown .select2-results__option--selected {
-  background-color: #038e83 !important;
+  background-color: #116ab2 !important;
   color: #0b0b0b !important;
 }
 .select2-container .select2-dropdown .select2-results__option--highlighted.select2-results__option--selectable {
-  color: #038e83;
+  color: #116ab2;
   background-color: #0b0b0b;
 }
 
@@ -1188,7 +1188,7 @@ form .passwordShowIconDiv i:hover {
   padding: 0.5rem 1rem !important;
   border-radius: 15px;
   background-color: #0b0b0b !important;
-  border: 2px solid #038e83 !important;
+  border: 2px solid #116ab2 !important;
 }
 .multiSelect .select2-container .selection .select2-selection__rendered .select2-selection__choice:nth-child(1) {
   margin: 0 !important;
@@ -1197,7 +1197,7 @@ form .passwordShowIconDiv i:hover {
   position: relative !important;
   order: 2;
   border: none !important;
-  color: #038e83 !important;
+  color: #116ab2 !important;
   margin-left: 0.5rem !important;
   font-size: 1.424rem !important;
   font-weight: 500 !important;
@@ -1252,13 +1252,13 @@ form .passwordShowIconDiv i:hover {
   position: relative !important;
   order: 2;
   border: none !important;
-  color: #08998d !important;
+  color: #0e5a96 !important;
   margin-left: 0.5rem !important;
   font-size: 1.266rem !important;
   font-weight: 400 !important;
 }
 .multiSearch .select2-container .selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__display {
-  color: #08998d !important;
+  color: #0e5a96 !important;
   order: 1;
 }
 .multiSearch .select2-container .selection textarea {
@@ -1280,13 +1280,13 @@ form .passwordShowIconDiv i:hover {
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
 }
 .multiSearch button:hover {
-  background-color: #08998d;
+  background-color: #0e5a96;
 }
 .multiSearch button:hover i {
   color: #ffffff;
 }
 .multiSearch button i {
-  color: #08998d;
+  color: #0e5a96;
   font-size: 1.125rem;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
@@ -1321,7 +1321,7 @@ form .passwordShowIconDiv i:hover {
   border: 1px solid #ebedf3;
 }
 .search button:hover i {
-  color: #08998d;
+  color: #0e5a96;
 }
 .search button i {
   color: #fffcf6;
@@ -1417,7 +1417,7 @@ form .passwordShowIconDiv i:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #08998d;
+  color: #0e5a96;
   pointer-events: none;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
@@ -1482,7 +1482,7 @@ form .passwordShowIconDiv i:hover {
 }
 .profileAvatarDropDown .profileMenu .profileDetails .title {
   margin: 0;
-  color: #08998d;
+  color: #0e5a96;
   font-size: 0.9rem;
   font-weight: 500;
   white-space: nowrap;
@@ -1659,7 +1659,7 @@ form .passwordShowIconDiv i:hover {
 .avatarUpload .avatarEdit input + label:after {
   content: "\f357";
   font-family: uicons-regular-rounded !important;
-  color: #08998d;
+  color: #0e5a96;
   text-align: center;
   margin: auto;
 }
@@ -1871,7 +1871,7 @@ form .passwordShowIconDiv i:hover {
   overflow: hidden;
 }
 .switchView .activeSwitch {
-  color: #08998d !important;
+  color: #0e5a96 !important;
   background-color: #fdfbfa;
   background: linear-gradient(to right top, #009fe3, #00a4e6, #02a8e8, #06adeb, #0cb1ed, #02b6ef, #00bcf1, #00c1f2, #00c9f3, #00d0f3, #00d7f2, #17def0);
 }
@@ -1883,7 +1883,7 @@ form .passwordShowIconDiv i:hover {
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
 }
 .switchView a:hover {
-  color: #08998d;
+  color: #0e5a96;
 }
 .switchView a i {
   margin: auto;
@@ -1922,7 +1922,7 @@ form .passwordShowIconDiv i:hover {
   z-index: 3;
 }
 .multiCheckbox .inputbox .checkboxField {
-  color: #08998d;
+  color: #0e5a96;
   font-size: 0.889rem;
   font-weight: 500;
   background-color: #ffffff;
@@ -2095,7 +2095,7 @@ form .passwordShowIconDiv i:hover {
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
 }
 .moreBtn .btnMenuDiv .btnMenu a:hover {
-  color: #08998d;
+  color: #0e5a96;
   background-color: #fdfbfa;
 }
 .moreBtn .btnMenuDiv .btnMenu a:nth-child(1) {
@@ -2375,84 +2375,84 @@ form .passwordShowIconDiv i:hover {
 .labelMovingAnimation input:-moz-placeholder-shown + label {
   top: 1rem;
   left: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-size: 0.9rem;
   font-weight: 400;
 }
 .labelMovingAnimation input:-ms-input-placeholder + label {
   top: 1rem;
   left: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-size: 0.9rem;
   font-weight: 400;
 }
 .labelMovingAnimation input:placeholder-shown + label {
   top: 1rem;
   left: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-size: 0.9rem;
   font-weight: 400;
 }
 .labelMovingAnimation input:not(:-moz-placeholder-shown) ~ label {
   top: 1rem;
   left: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-size: 0.9rem;
   font-weight: 400;
 }
 .labelMovingAnimation input:not(:-ms-input-placeholder) ~ label {
   top: 1rem;
   left: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-size: 0.9rem;
   font-weight: 400;
 }
 .labelMovingAnimation input:not(:placeholder-shown) ~ label {
   top: 1rem;
   left: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-size: 0.9rem;
   font-weight: 400;
 }
 .labelMovingAnimation textarea:-moz-placeholder-shown + label {
   top: 1rem;
   left: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-size: 0.9rem;
   font-weight: 400;
 }
 .labelMovingAnimation textarea:-ms-input-placeholder + label {
   top: 1rem;
   left: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-size: 0.9rem;
   font-weight: 400;
 }
 .labelMovingAnimation textarea:placeholder-shown + label {
   top: 1rem;
   left: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-size: 0.9rem;
   font-weight: 400;
 }
 .labelMovingAnimation textarea:not(:-moz-placeholder-shown) ~ label {
   top: 1rem;
   left: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-size: 0.9rem;
   font-weight: 400;
 }
 .labelMovingAnimation textarea:not(:-ms-input-placeholder) ~ label {
   top: 1rem;
   left: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-size: 0.9rem;
   font-weight: 400;
 }
 .labelMovingAnimation textarea:not(:placeholder-shown) ~ label {
   top: 1rem;
   left: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-size: 0.9rem;
   font-weight: 400;
 }
@@ -2588,7 +2588,7 @@ form .passwordShowIconDiv i:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #08998d;
+  color: #0e5a96;
   font-size: 0.889rem;
   padding: 0.5rem;
   background-color: #fdfbfa;
@@ -2637,7 +2637,7 @@ form .passwordShowIconDiv i:hover {
   }
 }
 .dropdownForm .dropDownDiv .dropList .dropBox:hover {
-  color: #038e83;
+  color: #116ab2;
 }
 .dropdownForm .dropDownDiv .dropList .dropBox:hover .dropIcon {
   border: 1px solid #b4e5ee;
@@ -2664,7 +2664,7 @@ form .passwordShowIconDiv i:hover {
   border: 1px solid #909294;
 }
 .dropdownForm .dropDownDiv .dropList .dropBox .icon:hover i {
-  color: #08998d;
+  color: #0e5a96;
 }
 .dropdownForm .dropDownDiv .dropList .dropBox .icon i {
   color: #909294;
@@ -2815,7 +2815,7 @@ form .passwordShowIconDiv i:hover {
   cursor: pointer;
 }
 .dropDownDiv .dropList .dropBox:hover {
-  color: #038e83;
+  color: #116ab2;
 }
 .dropDownDiv .dropList .dropBox:hover span i {
   color: #fffcf6;
@@ -2882,7 +2882,7 @@ form .passwordShowIconDiv i:hover {
 .privilegesDetails p {
   margin: 0;
   margin-bottom: 0.5rem;
-  color: #08998d;
+  color: #0e5a96;
   font-weight: 500;
 }
 .privilegesDetails label {
@@ -3514,7 +3514,7 @@ table tr .moreBtn .moreIcon {
 }
 .paginationFooter .pagination .activePage {
   color: #ffffff !important;
-  background-color: #08998d !important;
+  background-color: #0e5a96 !important;
 }
 .paginationFooter .pagination li {
   width: 33px;
@@ -3536,7 +3536,7 @@ table tr .moreBtn .moreIcon {
   cursor: pointer;
 }
 .paginationFooter .pagination li:hover {
-  color: #08998d;
+  color: #0e5a96;
   background-color: #ebedf3;
 }
 

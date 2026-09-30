@@ -191,7 +191,7 @@
 }
 @media (min-width: 768px) {
   #popupFormSection #popupForm #popupFormWrapper .slide .optionDiv li:hover {
-    border: 2px solid #038e83;
+    border: 2px solid #116ab2;
   }
 }
 #popupFormSection #popupForm #popupFormWrapper .slide .optionDiv li:hover label {
@@ -476,7 +476,7 @@
   border-right: 1px solid #242323;
 }
 #wallSection .arrowDiv .arrow:hover::before {
-  background-color: #038e83;
+  background-color: #116ab2;
 }
 #wallSection .arrowDiv .arrow::before {
   content: "";
@@ -517,7 +517,7 @@
   margin-top: 0.6667rem;
   font-family: "Barlow", sans-serif;
   font-weight: 300;
-  color: #038e83;
+  color: #116ab2;
 }
 
 #serviceSection {
@@ -532,7 +532,7 @@
   }
 }
 #serviceSection .label {
-  color: #038e83;
+  color: #116ab2;
   font-weight: 500;
 }
 #serviceSection .slider {
@@ -585,19 +585,19 @@
   background-color: gold;
 }
 #serviceSection .slider .serviceDiv .serviceCard:nth-child(1n+1) .title {
-  color: #038e83;
+  color: #116ab2;
 }
 #serviceSection .slider .serviceDiv .serviceCard:nth-child(2n+1)::before {
   background-color: hotpink;
 }
 #serviceSection .slider .serviceDiv .serviceCard:nth-child(2n+1) .title {
-  color: #038e83;
+  color: #116ab2;
 }
 #serviceSection .slider .serviceDiv .serviceCard:nth-child(3n+1)::before {
   background-color: darkcyan;
 }
 #serviceSection .slider .serviceDiv .serviceCard:nth-child(3n+1) .title {
-  color: #038e83;
+  color: #116ab2;
 }
 #serviceSection .slider .serviceDiv .serviceCard .imgDiv {
   overflow: hidden;
@@ -608,7 +608,7 @@
 #serviceSection .slider .serviceDiv .serviceCard .title {
   margin: 0;
   margin-top: 0.6667rem;
-  color: #038e83;
+  color: #116ab2;
   font-family: "Barlow", sans-serif;
   cursor: pointer;
 }
@@ -625,9 +625,9 @@
 #serviceSection .btnDiv .moreBtn {
   margin-top: 1rem;
   padding: 1rem;
-  border: 1px solid #038e83;
+  border: 1px solid #116ab2;
   border-radius: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-family: "Barlow", sans-serif;
   font-weight: 300;
   cursor: pointer;
@@ -648,7 +648,7 @@
   text-align: center;
 }
 #serviceSection2 .label {
-  color: #038e83;
+  color: #116ab2;
   font-weight: 500;
 }
 #serviceSection2 .serviceDiv {
@@ -685,19 +685,19 @@
   background-color: gold;
 }
 #serviceSection2 .serviceDiv .serviceCard:nth-child(1n+1) .title {
-  color: #038e83;
+  color: #116ab2;
 }
 #serviceSection2 .serviceDiv .serviceCard:nth-child(2n+1)::before {
   background-color: hotpink;
 }
 #serviceSection2 .serviceDiv .serviceCard:nth-child(2n+1) .title {
-  color: #038e83;
+  color: #116ab2;
 }
 #serviceSection2 .serviceDiv .serviceCard:nth-child(3n+1)::before {
   background-color: darkcyan;
 }
 #serviceSection2 .serviceDiv .serviceCard:nth-child(3n+1) .title {
-  color: #038e83;
+  color: #116ab2;
 }
 #serviceSection2 .serviceDiv .serviceCard .imgDiv {
   overflow: hidden;
@@ -708,7 +708,7 @@
 #serviceSection2 .serviceDiv .serviceCard .title {
   margin: 0;
   margin-top: 0.6667rem;
-  color: #038e83;
+  color: #116ab2;
   font-family: "Barlow", sans-serif;
   cursor: pointer;
 }
@@ -721,7 +721,7 @@
 #serviceSection2 .more {
   display: block;
   margin-top: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
@@ -738,7 +738,7 @@
   display: inline-block;
   margin-bottom: 5px;
   margin-right: 0.5rem;
-  background-color: #038e83;
+  background-color: #116ab2;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
 }
@@ -752,7 +752,7 @@
 }
 #reviewSection .title {
   margin: 0;
-  color: #08998d;
+  color: #0e5a96;
   font-family: "Barlow", sans-serif;
   font-weight: 400;
   text-align: center;
@@ -783,7 +783,7 @@
   }
 }
 #reviewSection #reviewContainer .arrow:hover::before {
-  background-color: #08998d;
+  background-color: #0e5a96;
 }
 #reviewSection #reviewContainer .arrow:nth-child(1) {
   left: 0;
@@ -798,7 +798,7 @@
   left: 0;
   width: 200%;
   height: 200%;
-  background-color: #038e83;
+  background-color: #116ab2;
   border-radius: 100%;
   transition: all 0.5s cubic-bezier(0.37, 0, 0.63, 1);
 }
@@ -862,7 +862,7 @@
   text-align: center;
 }
 #reviewSection #reviewContainer #reviewWrapper .reviewCard .profileDetails .details .name {
-  color: #038e83;
+  color: #116ab2;
 }
 #reviewSection #reviewContainer #reviewWrapper .reviewCard .profileDetails .details .text {
   margin-top: 0.25rem;
@@ -937,7 +937,7 @@
   }
 }
 #bannerSection .content .contact a:hover {
-  border: 1px solid #038e83;
+  border: 1px solid #116ab2;
 }
 #bannerSection .content .contact a img {
   height: 20px;
@@ -949,7 +949,7 @@
   margin: 0 auto;
   margin-top: 1.8rem;
   padding: 0.95rem 2.6rem;
-  background: linear-gradient(135deg, #038e83 0%, #026b63 100%);
+  background: linear-gradient(135deg, #116ab2 0%, #026b63 100%);
   color: #ffffff !important;
   border-radius: 50px;
   font-size: 1.05rem;
@@ -977,7 +977,7 @@
 }
 #bannerSection .bannerInquiryBtn:hover,
 #bannerSection a.formAction.bannerInquiryBtn:hover {
-  background: linear-gradient(135deg, #04a599 0%, #038e83 100%);
+  background: linear-gradient(135deg, #04a599 0%, #116ab2 100%);
   transform: translateY(-3px) scale(1.02) !important;
   box-shadow: 0 12px 30px rgba(3, 142, 131, 0.45);
   color: #ffffff !important;
@@ -1073,7 +1073,7 @@
   margin: 0;
   margin-top: 1rem;
   font-weight: 300;
-  color: #038e83;
+  color: #116ab2;
 }
 #aboutDoctorSection .wallContentWrapper .content .nexttitle {
   margin: 0;
@@ -1100,7 +1100,7 @@
   }
 }
 #aboutDoctorSection .wallContentWrapper .content .highlites .logoTitle .title {
-  color: #038e83;
+  color: #116ab2;
   font-weight: 500;
 }
 @media (min-width: 768px) {
@@ -1158,9 +1158,9 @@
 #aboutDoctorSection .wallContentWrapper .content .highlites .btnDiv .moreBtn {
   margin-top: 1.125rem;
   padding: 1rem;
-  border: 1px solid #038e83;
+  border: 1px solid #116ab2;
   border-radius: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-family: "Barlow", sans-serif;
   font-weight: 300;
   cursor: pointer;
@@ -1177,7 +1177,7 @@
 #aboutDoctorSection .wallContentWrapper .content .more {
   display: block;
   margin-top: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
@@ -1194,7 +1194,7 @@
   display: inline-block;
   margin-bottom: 5px;
   margin-right: 0.5rem;
-  background-color: #038e83;
+  background-color: #116ab2;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
 }
@@ -1349,12 +1349,12 @@
   }
 }
 #homeImgCardSection .card .content ul li::marker {
-  color: #038e83;
+  color: #116ab2;
 }
 #homeImgCardSection .card .content .more {
   display: block;
   margin-top: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-weight: 500;
   font-family: "Barlow", sans-serif;
   cursor: pointer;
@@ -1372,7 +1372,7 @@
   display: inline-block;
   margin-bottom: 5px;
   margin-right: 0.5rem;
-  background-color: #038e83;
+  background-color: #116ab2;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
 }
@@ -1471,7 +1471,7 @@
 #careSection2 .serviceDiv .serviceCard .title {
   margin: 0;
   margin-top: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-weight: 500;
   z-index: 1;
   white-space: nowrap;
@@ -1493,7 +1493,7 @@
   margin: 0 auto;
 }
 .contentSection .heading {
-  color: #08998d;
+  color: #0e5a96;
   font-size: 1.125rem;
   margin-bottom: 1rem;
 }
@@ -1570,7 +1570,7 @@
   margin: 0;
   margin-top: 1rem;
   font-weight: 300;
-  color: #038e83;
+  color: #116ab2;
 }
 #serviceWallSection .wallContentWrapper .content .nexttitle {
   margin: 0;
@@ -1596,12 +1596,12 @@
   }
 }
 #serviceWallSection .wallContentWrapper .content ul li::marker {
-  color: #038e83;
+  color: #116ab2;
 }
 #serviceWallSection .wallContentWrapper .content .more {
   display: block;
   margin-top: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-weight: 500;
   font-family: "Barlow", sans-serif;
   cursor: pointer;
@@ -1619,7 +1619,7 @@
   display: inline-block;
   margin-bottom: 5px;
   margin-right: 0.5rem;
-  background-color: #038e83;
+  background-color: #116ab2;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
 }

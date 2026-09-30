@@ -47,7 +47,7 @@
   margin-bottom: 1rem;
 }
 #faqSection .faqListDiv .dropList:hover .dropBox .title {
-  color: #08998d;
+  color: #0e5a96;
 }
 #faqSection .faqListDiv .dropList .dropBox {
   display: flex;
@@ -120,7 +120,7 @@
   }
 }
 #faqSection .faqListDiv .dropList .dropContent ul li::marker {
-  color: #038e83;
+  color: #116ab2;
 }
 
 #imgCardSection .card {
@@ -181,12 +181,12 @@
   }
 }
 #imgCardSection .card .content ul li::marker {
-  color: #038e83;
+  color: #116ab2;
 }
 #imgCardSection .card .content .more {
   display: block;
   margin-top: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-weight: 500;
   font-family: "Barlow", sans-serif;
   cursor: pointer;
@@ -204,7 +204,7 @@
   display: inline-block;
   margin-bottom: 5px;
   margin-right: 0.5rem;
-  background-color: #038e83;
+  background-color: #116ab2;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
 }
@@ -286,7 +286,7 @@
   margin: 0;
   margin-top: 1rem;
   font-weight: 400;
-  color: #038e83;
+  color: #116ab2;
 }
 #noImgSection .contentWrapper .content ul {
   padding-left: 1.125rem;
@@ -302,7 +302,7 @@
   }
 }
 #noImgSection .contentWrapper .content ul li::marker {
-  color: #038e83;
+  color: #116ab2;
 }
 #noImgSection .contentWrapper .content p {
   cursor: pointer;
@@ -315,7 +315,7 @@
 #noImgSection .contentWrapper .content .more {
   display: block;
   margin-top: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-weight: 500;
   font-family: "Barlow", sans-serif;
   cursor: pointer;
@@ -333,7 +333,7 @@
   display: inline-block;
   margin-bottom: 5px;
   margin-right: 0.5rem;
-  background-color: #038e83;
+  background-color: #116ab2;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
 }
@@ -379,7 +379,7 @@
   margin: 0;
   margin-top: 1rem;
   font-weight: 300;
-  color: #038e83;
+  color: #116ab2;
 }
 #pagesWallSection .wallContentWrapper .content .nexttitle {
   margin: 0;
@@ -405,12 +405,12 @@
   }
 }
 #pagesWallSection .wallContentWrapper .content ul li::marker {
-  color: #038e83;
+  color: #116ab2;
 }
 #pagesWallSection .wallContentWrapper .content .more {
   display: block;
   margin-top: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-weight: 500;
   font-family: "Barlow", sans-serif;
   cursor: pointer;
@@ -428,7 +428,7 @@
   display: inline-block;
   margin-bottom: 5px;
   margin-right: 0.5rem;
-  background-color: #038e83;
+  background-color: #116ab2;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
 }
@@ -515,7 +515,7 @@
   }
 }
 .highliteCards .listWrapper ul li::marker {
-  color: #038e83;
+  color: #116ab2;
 }
 .highliteCards .title {
   margin: 0;
@@ -576,7 +576,7 @@
   text-align: center;
 }
 #contentCardSection .label {
-  color: #038e83;
+  color: #116ab2;
   font-weight: 500;
 }
 @media (min-width: 1024px) {
@@ -610,7 +610,7 @@
 }
 #contentCardSection .serviceDiv .serviceCard .title {
   margin: 0;
-  color: #038e83 !important;
+  color: #116ab2 !important;
   font-family: "Barlow", sans-serif;
 }
 #contentCardSection .serviceDiv .serviceCard .btn {
@@ -658,7 +658,7 @@
   margin: 0;
   margin-top: 1rem;
   font-weight: 300;
-  color: #038e83;
+  color: #116ab2;
 }
 #aboudr .wallContentWrapper .content .nexttitle {
   margin: 0;
@@ -684,12 +684,12 @@
   }
 }
 #aboudr .wallContentWrapper .content ul li::marker {
-  color: #038e83;
+  color: #116ab2;
 }
 #aboudr .wallContentWrapper .content .more {
   display: block;
   margin-top: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
@@ -706,7 +706,7 @@
   display: inline-block;
   margin-bottom: 5px;
   margin-right: 0.5rem;
-  background-color: #038e83;
+  background-color: #116ab2;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
 }

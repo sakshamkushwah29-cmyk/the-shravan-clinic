@@ -150,7 +150,7 @@
   }
 }
 #addressSection .card .content .contactDiv {
-  color: #038e83;
+  color: #116ab2;
 }
 #addressSection .card .content .contactDiv p {
   font-weight: 500;
@@ -183,12 +183,12 @@
   }
 }
 #addressSection .card .content ul li::marker {
-  color: #038e83;
+  color: #116ab2;
 }
 #addressSection .card .content .more {
   display: block;
   margin-top: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-weight: 500;
   font-family: "Barlow", sans-serif;
   cursor: pointer;
@@ -206,7 +206,7 @@
   display: inline-block;
   margin-bottom: 5px;
   margin-right: 0.5rem;
-  background-color: #038e83;
+  background-color: #116ab2;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
 }
@@ -294,7 +294,7 @@
   margin-bottom: 1rem;
 }
 #faqSection .faqListDiv .dropList:hover .dropBox .title {
-  color: #08998d;
+  color: #0e5a96;
 }
 #faqSection .faqListDiv .dropList .dropBox {
   display: flex;
@@ -367,7 +367,7 @@
   }
 }
 #faqSection .faqListDiv .dropList .dropContent ul li::marker {
-  color: #038e83;
+  color: #116ab2;
 }
 
 #noImgSection .contentWrapper {
@@ -426,13 +426,13 @@
 }
 
 #noImgSection .contentWrapper .content ul li::marker {
-  color: #038e83;
+  color: #116ab2;
 }
 
 #noImgSection .contentWrapper .content .more {
   display: block;
   margin-top: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-weight: 500;
   font-family: "Barlow", sans-serif;
   cursor: pointer;
@@ -446,7 +446,7 @@
   display: inline-block;
   margin-bottom: 5px;
   margin-right: 0.5rem;
-  background-color: #038e83;
+  background-color: #116ab2;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
 }
@@ -522,13 +522,13 @@
 }
 
 #aboudr .wallContentWrapper .content ul li::marker {
-  color: #038e83;
+  color: #116ab2;
 }
 
 #aboudr .wallContentWrapper .content .more {
   display: block;
   margin-top: 1rem;
-  color: #038e83;
+  color: #116ab2;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
@@ -547,7 +547,7 @@
   display: inline-block;
   margin-bottom: 5px;
   margin-right: 0.5rem;
-  background-color: #038e83;
+  background-color: #116ab2;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
 }

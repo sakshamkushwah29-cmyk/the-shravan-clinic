@@ -164,11 +164,11 @@
 }
 
 .color1 {
-  color: #038e83;
+  color: #116ab2;
 }
 
 .color2 {
-  color: #08998d;
+  color: #0e5a96;
 }
 
 #mainContainer {
@@ -299,7 +299,7 @@
   }
 }
 #mainContainer #headerSection #menuSection .menuContainer .menu:hover {
-  color: #038e83;
+  color: #116ab2;
 }
 #mainContainer #headerSection #menuSection .menuContainer .mainMenu {
   display: flex;
@@ -328,7 +328,7 @@
   opacity: 0.5;
 }
 #mainContainer #headerSection #menuSection .menuContainer .mainMenu:hover {
-  color: #038e83;
+  color: #116ab2;
 }
 #mainContainer #headerSection #menuSection .menuContainer .menuDiv {
   width: 100%;
@@ -342,7 +342,7 @@
   }
 }
 #mainContainer #headerSection #menuSection .menuContainer .menuDiv:hover .mainMenu {
-  color: #038e83;
+  color: #116ab2;
 }
 @media (min-width: 1280px) {
   #mainContainer #headerSection #menuSection .menuContainer .menuDiv:hover .subMenu {
@@ -366,7 +366,7 @@
   width: 100vw;
   height: 0;
   display: none;
-  background-color: #038e83;
+  background-color: #116ab2;
   border-top: none;
   overflow: hidden;
   text-align: left;
@@ -426,11 +426,11 @@
 #mainContainer #headerSection #menuSection .menuContainer .menuDiv .subMenu a:hover {
   bottom: 0;
   color: #ffffff;
-  background-color: #038e83;
+  background-color: #116ab2;
 }
 @media (min-width: 1280px) {
   #mainContainer #headerSection #menuSection .menuContainer .menuDiv .subMenu a:hover {
-    background-color: #08998d;
+    background-color: #0e5a96;
   }
 }
 #mainContainer #headerSection #menuIcon {
@@ -516,7 +516,7 @@
   }
 }
 #mainContainer #headerSection #tabMenu .contactMenu #callBtn {
-  background-color: #038e83;
+  background-color: #116ab2;
   background-color: linear-gradient(to right top, #00aea0, #01a89a, #01a295, #029c8f, #02968a, #029186, #028d82, #02887e, #01847a, #018076, #007c73, #00786f);
 }
 #mainContainer #headerSection #tabMenu .contactMenu a {
@@ -572,7 +572,7 @@
     color: #0b0b0b;
   }
   #mainContainer #headerSection #tabMenu .contactNumber:hover {
-    color: #038e83;
+    color: #116ab2;
   }
 }
 #mainContainer #headerSection #tabMenu .chat {
@@ -632,7 +632,7 @@
     margin-left: 1rem;
     border-radius: 15px;
     padding: 0.5rem 1rem;
-    border: 1px solid #038e83;
+    border: 1px solid #116ab2;
     background: linear-gradient(to right top, #00aea0, #01a89a, #01a295, #029c8f, #02968a, #029186, #028d82, #02887e, #01847a, #018076, #007c73, #00786f);
   }
 }
@@ -699,7 +699,7 @@
   font-weight: 600;
   margin: 0;
   margin-bottom: 1rem;
-  color: #038e83;
+  color: #116ab2;
 }
 #mainContainer #footerSection #footerMain .footerMenu a {
   display: block;
@@ -710,7 +710,7 @@
   cursor: pointer;
 }
 #mainContainer #footerSection #footerMain .footerMenu a:hover {
-  color: #08998d;
+  color: #0e5a96;
 }
 #mainContainer #footerSection #footerMain .footerMenu p {
   display: block;
@@ -721,7 +721,7 @@
   cursor: pointer;
 }
 #mainContainer #footerSection #footerMain .footerMenu p:hover {
-  color: #08998d;
+  color: #0e5a96;
 }
 #mainContainer #footerSection #footerBottom {
   display: flex;
