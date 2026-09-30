@@ -1038,6 +1038,54 @@
   margin-right: 0.5rem;
 }
 
+#bannerSection .bannerInquiryWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+#bannerSection .bannerInquiryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #116ab2;
+  color: #ffffff !important;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 14px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(17, 106, 178, 0.28);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  letter-spacing: 0.3px;
+  border: 1.5px solid #116ab2;
+  cursor: pointer;
+}
+
+#bannerSection .bannerInquiryBtn:hover {
+  background-color: #0e5a96;
+  border-color: #0e5a96;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(17, 106, 178, 0.4);
+  color: #ffffff !important;
+}
+
+#bannerSection .bannerInquiryBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 14px rgba(17, 106, 178, 0.25);
+}
+
+#bannerSection .bannerInquiryBtn svg {
+  transition: transform 0.3s ease;
+}
+
+#bannerSection .bannerInquiryBtn:hover svg {
+  transform: translateX(4px);
+}
+
 
 #aboutDoctorSection {
   padding-bottom: 2.441rem;
