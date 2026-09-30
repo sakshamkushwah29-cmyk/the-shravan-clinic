@@ -1103,47 +1103,40 @@
   color: #038e83;
   font-weight: 500;
 }
-@media (min-width: 768px) {
-  #aboutDoctorSection .wallContentWrapper .content .highlites .logos {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-left: 2.6667rem;
-  }
+#aboutDoctorSection .wallContentWrapper .content .highlites .logos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 @media (min-width: 1024px) {
   #aboutDoctorSection .wallContentWrapper .content .highlites .logos {
     justify-content: flex-start;
-    margin: 0;
+    gap: 1.25rem;
   }
 }
 #aboutDoctorSection .wallContentWrapper .content .highlites .logos .logosCard {
-  margin: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   text-align: center;
-}
-@media (min-width: 768px) {
-  #aboutDoctorSection .wallContentWrapper .content .highlites .logos .logosCard {
-    margin: 1.3333rem;
-  }
-}
-@media (min-width: 1024px) {
-  #aboutDoctorSection .wallContentWrapper .content .highlites .logos .logosCard {
-    margin: 1rem 1rem 0 0;
-  }
+  width: 100px;
 }
 #aboutDoctorSection .wallContentWrapper .content .highlites .logos .logosCard img {
-  width: 60px;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
 }
 #aboutDoctorSection .wallContentWrapper .content .highlites .logos .logosCard p {
-  font-size: 1.125rem;
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+  line-height: 1.3;
 }
 @media (min-width: 1024px) {
   #aboutDoctorSection .wallContentWrapper .content .highlites .logos .logosCard p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 }
 #aboutDoctorSection .wallContentWrapper .content .highlites .btnDiv {
