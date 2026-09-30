@@ -242,6 +242,28 @@
            return false;
          }
       </script>
+    <style>
+      #popupFormWrapper {
+        position: relative;
+        z-index: 100;
+      }
+    </style>
+    <script>
+      function openInquiryDrawer() {
+        if (typeof $ !== 'undefined') {
+          $("body").toggleClass("bodyIntro");
+          $("#mainContainer").toggleClass("mainContainerIntro");
+          $("#popupFormSection").toggleClass("popupFormSectionIntro");
+          $(".formActionText").toggleClass("closeForm");
+        } else {
+          document.body.classList.toggle("bodyIntro");
+          var mc = document.getElementById("mainContainer");
+          if (mc) mc.classList.toggle("mainContainerIntro");
+          var pf = document.getElementById("popupFormSection");
+          if (pf) pf.classList.toggle("popupFormSectionIntro");
+        }
+      }
+    </script>
      <section id="popupFormSection" class="" method="post" action="">
     <form id="popupForm" action="" method="post">
       <div id="popupFormWrapper" class="contactForm" bis_skin_checked="1">
@@ -261,7 +283,7 @@
             </div>
             
             <div class="btnDiv" bis_skin_checked="1">
-              <a href="javascript:void(0);" class="formAction btn btn2 lgBtn">Close</a>
+              <a href="javascript:void(0);" onclick="openInquiryDrawer(); return false;" class="formAction btn btn2 lgBtn" style="cursor: pointer;">Close</a>
               <button type="submit" id="contactSubmit" class="btn btn1 lgBtn">
                 Send Now <span style="display: none;color:white;" class="loader"></span>
               </button>
@@ -279,7 +301,7 @@
   <main id="mainContainer" class="pageMargin">
     <!--Header Section-->
      <header id="headerSection" class="section headerMain">
-      <a href="/en/" class="logoDiv"><img src="drtulikamindcare.com/images/tulikacolor.svg" alt="" /></a>
+      <a href="/" class="logoDiv"><img src="/images/shravan-logo.svg" alt="The Shravan Clinic" style="max-height: 48px;" /></a>
       <nav id="menuSection" class="section sectionSpace" style="display: none;">
         <div class="menuContainer" style="margin: 0;" bis_skin_checked="1"></div>
       </nav>
@@ -304,7 +326,7 @@
 
         <a href="tel:+919232643041" class=" contactNumber">+91 92326 43041</a>
         <a href="https://wa.me/919232643041?text=Hello%20Dr.%20Apoorv%20Shah,%20I%20would%20like%20to%20consult%20at%20The%20Shravan%20Clinic" target="_blank" class="chat btn2 mdBtn"><img src="drtulikamindcare.com/images/icon/whatsapp%20(10).png" alt="" /></a>
-        <a class="formAction btn1 mdBtn">Contact Us</a>
+        <a href="javascript:void(0);" onclick="openInquiryDrawer(); return false;" class="formAction btn1 mdBtn" style="cursor: pointer;">Contact Us</a>
       </div>
     </header>
          <!--<a href="https://api.whatsapp.com/send?phone=+91 7303 711 007" target="blank" id="chatDivOnScroll" class="chatDivOnScrollIntro"><img id="chatScroll" src="https://res.cloudinary.com/asssssss/image/upload/f_auto,q_auto:good/v1649755880/website-images/icons/sm/chat_6_jtvlpa.png" alt="Whatsapp Chat"></a>-->
@@ -1133,7 +1155,7 @@
             </a>
           </div>
           <div class="bannerInquiryWrapper" style="margin-top: 1.8rem; display: flex; justify-content: center; align-items: center;" bis_skin_checked="1">
-            <a href="javascript:void(0);" class="formAction bannerInquiryBtn" title="Inquiry Now">
+            <a href="javascript:void(0);" onclick="openInquiryDrawer(); return false;" class="formAction bannerInquiryBtn" title="Inquiry Now">
               <span>Inquiry Now</span>
               <svg class="inquiryArrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -1227,17 +1249,17 @@
         .paddingLeft));
       var totalWidthOfCards = cardOuterWidth * cardNos;
       if (direction === 'prev') {
-        window[slideIndex] = (window[slideIndex] &gt; 0) ? window[slideIndex] - increment : 0;
+        window[slideIndex] = (window[slideIndex] > 0) ? window[slideIndex] - increment : 0;
       } else if (direction === 'next') {
-        window[slideIndex] = (window[slideIndex] &lt;= cardNos) ? window[slideIndex] + increment : 0;
+        window[slideIndex] = (window[slideIndex] <= cardNos) ? window[slideIndex] + increment : 0;
       }
       console.log('fnindex : ' + window[slideIndex]);
-      //window[slideIndex] = (window[slideIndex] &gt; (cardNos - 1)) ? 0 : window[slideIndex];
+      //window[slideIndex] = (window[slideIndex] > (cardNos - 1)) ? 0 : window[slideIndex];
       distanceToTransalte = window[slideIndex] * cardOuterWidth;
-      if (distanceToTransalte &gt; ((totalWidthOfCards - wrapperInnerWidth) + (cardOuterWidth * increment))) {
+      if (distanceToTransalte > ((totalWidthOfCards - wrapperInnerWidth) + (cardOuterWidth * increment))) {
         window[slideIndex] = 0;
         distanceToTransalte = 0;
-      } else if (distanceToTransalte &gt; (totalWidthOfCards - wrapperInnerWidth)) {
+      } else if (distanceToTransalte > (totalWidthOfCards - wrapperInnerWidth)) {
         distanceToTransalte = totalWidthOfCards - wrapperInnerWidth;
         window[slideIndex] = cardNos;
       }
@@ -1249,7 +1271,8 @@
     }
 
     $(document).ready(function () {
-      $(".formAction").on("click", function (e) {
+      $(document).on("click", ".formAction", function (e) {
+        e.preventDefault();
         $("body").toggleClass("bodyIntro");
         $("#mainContainer").toggleClass("mainContainerIntro");
         $("#popupFormSection").toggleClass("popupFormSectionIntro");
@@ -1287,7 +1310,7 @@
     /*onScroll Function*/
     window.onscroll = function () {
       var headerTopDiv = document.getElementById('headerSection');
-      if (window.pageYOffset &gt;= 10) {
+      if (window.pageYOffset >= 10) {
         headerTopDiv.classList.add("headerIntro");
         headerTopDiv.classList.remove("headerMain");
       } else {

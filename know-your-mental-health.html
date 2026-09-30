@@ -222,6 +222,22 @@
            return false;
          }
       </script>
+    <script>
+      function openInquiryDrawer() {
+        if (typeof $ !== 'undefined') {
+          $("body").toggleClass("bodyIntro");
+          $("#mainContainer").toggleClass("mainContainerIntro");
+          $("#popupFormSection").toggleClass("popupFormSectionIntro");
+          $(".formActionText").toggleClass("closeForm");
+        } else {
+          document.body.classList.toggle("bodyIntro");
+          var mc = document.getElementById("mainContainer");
+          if (mc) mc.classList.toggle("mainContainerIntro");
+          var pf = document.getElementById("popupFormSection");
+          if (pf) pf.classList.toggle("popupFormSectionIntro");
+        }
+      }
+    </script>
      <section id="popupFormSection" class="" method="post" action="">
     <form id="popupForm" action="" method="post">
       <div id="popupFormWrapper" class="contactForm">
@@ -242,7 +258,7 @@
             </div>
             
             <div class="btnDiv">
-              <a class="formAction btn btn2 lgBtn">Close</a>
+              <a href="javascript:void(0);" onclick="openInquiryDrawer(); return false;" class="formAction btn btn2 lgBtn" style="cursor: pointer;">Close</a>
               <button type="submit" id="contactSubmit" class="btn btn1 lgBtn">
                 Send Now <span style="display: none;color:white;" class="loader"></span>
               </button>
@@ -1166,7 +1182,7 @@
               <span>drapoorvshah@gmail.com</span>
             </a>
           <div class="bannerInquiryWrapper" style="margin-top: 1.8rem; display: flex; justify-content: center; align-items: center;">
-            <a href="javascript:void(0);" class="formAction bannerInquiryBtn" title="Inquiry Now">
+            <a href="javascript:void(0);" onclick="openInquiryDrawer(); return false;" class="formAction bannerInquiryBtn" title="Inquiry Now">
               <span>Inquiry Now</span>
               <svg class="inquiryArrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="7" y1="17" x2="17" y2="7"></line>
