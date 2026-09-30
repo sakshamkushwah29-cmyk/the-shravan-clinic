@@ -259,8 +259,6 @@
           if (mc) mc.classList.add("mainContainerIntro");
           var pf = document.getElementById("popupFormSection");
           if (pf) pf.classList.add("popupFormSectionIntro");
-          var ab = document.getElementById("bannerArrowBtn");
-          if (ab) ab.classList.add("isOpen");
           setTimeout(function() {
             var n = document.getElementById("name");
             if (n) n.focus();
@@ -271,8 +269,6 @@
           if (mc) mc.classList.remove("mainContainerIntro");
           var pf = document.getElementById("popupFormSection");
           if (pf) pf.classList.remove("popupFormSectionIntro");
-          var ab = document.getElementById("bannerArrowBtn");
-          if (ab) ab.classList.remove("isOpen");
         }
       }
       function openInquiryDrawer() { toggleInquiryDrawer(true); }
@@ -1168,15 +1164,6 @@
               <span>WhatsApp</span>
             </a>
           </div>
-
-          <a href="javascript:void(0);" class="formAction bannerArrowBtn" id="bannerArrowBtn" aria-label="Open Let Me Help You form" onclick="toggleInquiryDrawer(); return false;">
-            <span class="arrowCircle">
-              <svg class="arrowSvg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </span>
-          </a>
         </div>
       </section>
 
@@ -1285,12 +1272,7 @@
     }
 
     $(document).ready(function () {
-      $(document).on("click", ".bannerArrowBtn", function (e) {
-        e.preventDefault();
-        toggleInquiryDrawer();
-      });
-
-      $(document).on("click", ".formAction:not(.bannerArrowBtn)", function (e) {
+      $(document).on("click", ".formAction", function (e) {
         e.preventDefault();
         toggleInquiryDrawer();
       });
@@ -1303,7 +1285,7 @@
       // Close when clicking outside drawer while open
       $(document).on("click", function (e) {
         if ($("body").hasClass("bodyIntro")) {
-          if (!$(e.target).closest("#popupFormSection, .formAction, .bannerArrowBtn").length) {
+          if (!$(e.target).closest("#popupFormSection, .formAction").length) {
             closeInquiryDrawer();
           }
         }
