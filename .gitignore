@@ -2,3 +2,4 @@
 *.backup
 .vercel
 node_modules
+.env*
