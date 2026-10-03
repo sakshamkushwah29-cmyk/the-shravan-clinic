@@ -337,17 +337,25 @@
          
    <!--Hero Section-->
     <style>
-      /* Global Mobile Responsive & Viewport Fixes */
-      html, body {
-        width: 100% !important;
-        max-width: 100% !important;
-        overflow-x: hidden !important;
-        position: relative;
+      /* Ensure proper page bounds and seamless scrolling */
+      html {
+        width: 100%;
+        max-width: 100%;
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        width: 100%;
+        max-width: 100%;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
       }
       #mainContainer {
-        width: 100% !important;
-        max-width: 100% !important;
-        overflow-x: hidden !important;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
       }
       /* Prevent off-screen drawer from inflating mobile document width before open */
       #popupFormSection:not(.popupFormSectionIntro) {
