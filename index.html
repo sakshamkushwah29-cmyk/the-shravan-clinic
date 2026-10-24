@@ -215,7 +215,602 @@
       #popupFormWrapper {
       z-index: 100;
       }
-   </style><style data-emotion="cosmos-global-global" data-s=""></style></head>
+   </style><style data-emotion="cosmos-global-global" data-s=""></style>
+  <!-- ========================================================
+       PDF Feedback Corrections Styles
+       ======================================================== -->
+  <style id="pdfCorrectionsStyles">
+    /* Header logo */
+    .mainSiteLogo {
+      height: 64px !important;
+      max-height: 70px !important;
+      width: auto !important;
+      transition: transform 0.25s ease;
+    }
+    .mainSiteLogo:hover {
+      transform: scale(1.03);
+    }
+    .footerSiteLogo {
+      height: 68px !important;
+      max-height: 72px !important;
+      width: auto !important;
+    }
+
+    /* About Doctor Credentials */
+    .doctorImageProfileBadge {
+      margin-top: 10px;
+      text-align: center;
+      background: #f0f7fd;
+      border: 1px solid #cbe2f7;
+      border-radius: 12px;
+      padding: 8px 12px;
+    }
+    .doctorImageProfileBadge strong {
+      display: block;
+      font-size: 1.05rem;
+      color: #116ab2;
+      font-weight: 700;
+    }
+    .doctorImageProfileBadge span {
+      font-size: 0.82rem;
+      color: #475569;
+      font-weight: 600;
+    }
+    .doctorBioIntro {
+      font-size: 1.08rem !important;
+      line-height: 1.75 !important;
+      color: #2c3e50 !important;
+      margin-bottom: 1.5rem !important;
+    }
+    .aboutCredentialsGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin: 1.8rem 0 2rem;
+    }
+    .credCard {
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1.5px solid #e2e8f0;
+      padding: 18px 22px;
+      box-shadow: 0 4px 16px rgba(17,106,178,0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .credCard:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(17,106,178,0.12);
+      border-color: #116ab2;
+    }
+    .credCardHeader {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      border-bottom: 1.5px solid #f1f5f9;
+      padding-bottom: 10px;
+    }
+    .credCardTitle {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      color: #116ab2;
+      font-family: 'Barlow', sans-serif;
+    }
+    .credList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .credList li {
+      position: relative;
+      padding-left: 22px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #334155;
+    }
+    .credList li::before {
+      content: "•";
+      position: absolute;
+      left: 6px;
+      top: 0;
+      color: #116ab2;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    /* Research Section Styles */
+    .researchCardsGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .researchCardItem {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+    }
+    .researchCardItem:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 32px rgba(17,106,178,0.14);
+      border-color: #93c5fd;
+    }
+    .researchTypeBadge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: #116ab2;
+      background: #e3eef8;
+      padding: 5px 12px;
+      border-radius: 20px;
+      width: fit-content;
+      margin-bottom: 14px;
+    }
+    .researchTypeBadge.publishedBadge {
+      background: #ecfdf5;
+      color: #059669;
+    }
+    .researchItemTitle {
+      margin: 0 0 12px;
+      font-size: 1.08rem;
+      font-weight: 700;
+      line-height: 1.5;
+      color: #0f172a;
+      font-family: 'Barlow', sans-serif;
+    }
+    .researchItemDesc {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: #64748b;
+      margin: 0 0 16px;
+      flex: 1;
+    }
+    .publishedMetaBlock {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid #f1f5f9;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .journalBadge {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #334155;
+      font-style: italic;
+    }
+    .doiLinkBadge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #116ab2;
+      font-weight: 600;
+      font-size: 0.82rem;
+      text-decoration: none;
+      background: #f0f7ff;
+      border: 1px solid #bfdbfe;
+      padding: 5px 12px;
+      border-radius: 8px;
+      width: fit-content;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    .doiLinkBadge:hover {
+      background: #116ab2;
+      color: #ffffff;
+    }
+    .researchItemFooter {
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid #f1f5f9;
+    }
+    .researchAuthorTag {
+      font-size: 0.82rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    /* Instagram Showcase Styles */
+    .instaBannerCard {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      padding: 36px 32px;
+      text-align: center;
+      margin-bottom: 36px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.3);
+    }
+    .instaHandleBadge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: #ffffff;
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+    .instaBannerTitle {
+      margin: 0 0 12px;
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: #ffffff;
+      font-family: 'Barlow', sans-serif;
+    }
+    .instaBannerSubtitle {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #cbd5e1;
+      max-width: 640px;
+      margin: 0 auto 24px;
+    }
+    .instaFollowCtaBtn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(220, 39, 67, 0.35);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .instaFollowCtaBtn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 32px rgba(220, 39, 67, 0.45);
+    }
+    .instaPostsGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+    .instaPostCard {
+      background: #1e293b;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 22px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      transition: transform 0.25s ease;
+    }
+    .instaPostCard:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+    .instaPostTopBar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(15, 23, 42, 0.6);
+    }
+    .instaBrandPill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .instaBookBtn {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #ffffff;
+      background: #116ab2;
+      padding: 5px 12px;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+    .instaBookBtn:hover {
+      background: #0d538c;
+    }
+    .instaPostImgBox {
+      position: relative;
+      height: 290px;
+      overflow: hidden;
+      background: #020617;
+    }
+    .instaPostImgBox img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .instaPostCard:hover .instaPostImgBox img {
+      transform: scale(1.04);
+    }
+    .instaPostCategoryPill {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      z-index: 2;
+    }
+    .instaOverlayWaBtn {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: #25d366;
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 6px 14px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      z-index: 2;
+    }
+    .instaPostContent {
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .instaPostTitle {
+      margin: 0 0 8px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.4;
+    }
+    .instaPostExcerpt {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: #94a3b8;
+      margin: 0 0 16px;
+      flex: 1;
+    }
+    .instaPostFooter {
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .instaMetrics {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.84rem;
+      color: #cbd5e1;
+    }
+    .instaMetrics span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .instaViewPostLink {
+      color: #38bdf8;
+      font-weight: 700;
+      font-size: 0.88rem;
+      text-decoration: none;
+    }
+    .instaViewPostLink:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer Map & Follow Us Styles */
+    .clickableFooterLocation {
+      color: #116ab2 !important;
+      text-decoration: none !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    .clickableFooterLocation:hover {
+      color: #0c4d82 !important;
+      text-decoration: underline !important;
+    }
+    .mapChip {
+      background: #e3eef8;
+      color: #116ab2;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 6px;
+    }
+    .footerFollowHighlightContainer {
+      border-top: 1px solid #e2e8f0;
+      padding: 22px 20px 20px;
+      background: #f8fafc;
+      border-radius: 16px;
+      margin: 20px 0;
+    }
+    .footerFollowInner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .followHeadline {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #116ab2;
+      letter-spacing: 0.3px;
+    }
+    .followButtonsBar {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .footerSocialBtn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration: none;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      color: #1e293b;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      transition: all 0.2s ease;
+    }
+    .footerSocialBtn img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+    }
+    .footerSocialBtn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    }
+    .footerSocialBtn.instaPill:hover {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: #ffffff;
+      border-color: transparent;
+    }
+    .footerSocialBtn.ytPill:hover {
+      background: #ff0000;
+      color: #ffffff;
+      border-color: transparent;
+    }
+    .footerSocialBtn.ytPill:hover svg {
+      fill: #ffffff;
+    }
+    .footerSocialBtn.fbPill:hover {
+      background: #1877f2;
+      color: #ffffff;
+      border-color: transparent;
+    }
+    .footerSocialBtn.fbPill:hover svg {
+      fill: #ffffff;
+    }
+    .footerSocialBtn.inPill:hover {
+      background: #0077b5;
+      color: #ffffff;
+      border-color: transparent;
+    }
+    .footerSocialBtn.waPill:hover {
+      background: #25d366;
+      color: #ffffff;
+      border-color: transparent;
+    }
+
+    /* Floating Social & Review Dock (Page 6 Screenshot) */
+    .floatingSocialDock {
+      position: fixed;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 99999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 10px 7px;
+      border-radius: 36px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.16);
+      border: 1px solid rgba(17, 106, 178, 0.15);
+    }
+    .dockIconBtn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+    }
+    .dockIconBtn img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+    .dockIconBtn:hover {
+      transform: scale(1.15);
+    }
+    .dockInsta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .dockFb { background: #1877f2; }
+    .dockTw { background: #000000; }
+    .dockPhone { background: #116ab2; }
+    .dockWa { background: #25d366; }
+    .dockIn { background: #0077b5; }
+    .dockRatingBadge {
+      display: block;
+      margin-top: 4px;
+      width: 44px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease;
+    }
+    .dockRatingBadge:hover {
+      transform: scale(1.12);
+    }
+    .dockRatingBadge img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .floatingSocialDock {
+        right: 8px;
+        padding: 8px 5px;
+        gap: 6px;
+      }
+      .dockIconBtn {
+        width: 34px;
+        height: 34px;
+      }
+      .dockRatingBadge {
+        width: 38px;
+      }
+      .footerFollowInner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+
+</head>
    
    <body __processed_7c808e06-c594-4560-8f93-88b9bf9aa5d1__="true" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJlbmFibGVkIiwiRkFDRUJPT0siOiJlbmFibGVkIiwiVFdJVFRFUiI6ImVuYWJsZWQiLCJSRURESVQiOiJlbmFibGVkIiwiUElOVEVSRVNUIjoiZW5hYmxlZCIsIklOU1RBR1JBTSI6ImVuYWJsZWQiLCJUSUtUT0siOiJlbmFibGVkIiwiTElOS0VESU4iOiJlbmFibGVkIiwiQ09ORklHIjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMy4wIiwic2NvcmUiOjIwMzAwMH1d">
       <!-- Google Tag Manager (noscript) -->
@@ -305,7 +900,7 @@
   <main id="mainContainer" class="pageMargin">
     <!--Header Section-->
      <header id="headerSection" class="section headerMain">
-      <a href="/" class="logoDiv"><img src="/images/shravan-logo.svg" alt="The Shravan Clinic" style="max-height: 48px;" /></a>
+      <a href="/" class="logoDiv" style="display: inline-flex; align-items: center; text-decoration: none;"><img src="/images/shravan-logo.svg" alt="The Shravan Clinic" class="mainSiteLogo" style="height: 64px; max-height: 70px; width: auto; object-fit: contain;" /></a>
       <nav id="menuSection" class="section sectionSpace" style="display: none;">
         <div class="menuContainer" style="margin: 0;" bis_skin_checked="1"></div>
       </nav>
@@ -387,20 +982,56 @@
         align-items: center;
       }
       .heroContent{ position: relative; z-index: 2; }
+      .heroDoctorHighlightBadge{
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(135deg, #e7f2fb 0%, #f4f8fc 100%);
+        border: 1.5px solid #bdd7ef;
+        padding: 7px 18px;
+        border-radius: 50px;
+        margin-bottom: 16px;
+        box-shadow: 0 4px 14px rgba(17,106,178,0.1);
+      }
+      .heroDoctorHighlightBadge .docName{
+        color: #116ab2;
+        font-weight: 800;
+        font-size: 1.02rem;
+        letter-spacing: 0.2px;
+      }
+      .heroDoctorHighlightBadge .docDivider{
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #116ab2;
+      }
+      .heroDoctorHighlightBadge .docQual{
+        color: #2c433d;
+        font-weight: 600;
+        font-size: 0.88rem;
+      }
       .heroEyebrow{
         font-size: 0.8rem;
         font-weight: 600;
         letter-spacing: 1.5px;
         text-transform: uppercase;
         color: #7c9490;
-        margin: 0 0 18px;
+        margin: 0 0 14px;
       }
       .heroTitle{
-        font-size: 2.9rem;
-        line-height: 1.18;
+        font-size: 2.85rem;
+        line-height: 1.2;
         font-weight: 700;
         color: #1e2f2c;
         margin: 0 0 20px;
+      }
+      .heroTitle .doctorLeadName{
+        display: block;
+        color: #116ab2;
+        font-size: 1.15em;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        margin-bottom: 8px;
       }
       .heroTitle .accent{ color: #116ab2; }
       .heroLede{
@@ -409,6 +1040,35 @@
         color: #55645f;
         max-width: 46ch;
         margin: 0 0 30px;
+      }
+      .heroDoctorBelowCaption{
+        margin-top: 14px;
+        text-align: center;
+        background: #ffffff;
+        border: 1.5px solid #e2e8f0;
+        padding: 12px 18px;
+        border-radius: 18px;
+        box-shadow: 0 8px 24px rgba(17,106,178,0.08);
+      }
+      .doctorBoldBelowName{
+        margin: 0;
+        font-size: 1.28rem;
+        font-weight: 800;
+        color: #1e2f2c;
+        letter-spacing: 0.2px;
+        line-height: 1.2;
+      }
+      .doctorBoldBelowQual{
+        margin: 4px 0 0;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #116ab2;
+        letter-spacing: 0.3px;
+      }
+      .doctorBoldBelowRole{
+        margin: 3px 0 0;
+        font-size: 0.82rem;
+        color: #55645f;
       }
       .heroActions{
         display: flex;
@@ -681,8 +1341,17 @@
     <section id="wallSlideSection" class="heroSection">
       <div class="heroInner" bis_skin_checked="1">
         <div class="heroContent aos-init aos-animate" data-aos="fade-up" data-aos-duration="800" bis_skin_checked="1">
+          <!-- Page 1 Feedback 2: Name of Dr. Apoorv Shah highlighted at the start itself -->
+          <div class="heroDoctorHighlightBadge">
+            <span class="docName">Dr. Apoorv Shah</span>
+            <span class="docDivider"></span>
+            <span class="docQual">M.B.B.S., M.D., D.N.B. (Psychiatry)</span>
+          </div>
           <p class="heroEyebrow">Compassionate · Evidence-Based · Personalised Care</p>
-          <h1 class="heroTitle">Neuro-Psychiatrist &amp; De-addiction Specialist in Ujjain for <span class="accent">Personalised Mental Health Care</span></h1>
+          <h1 class="heroTitle">
+            <span class="doctorLeadName">Dr. Apoorv Shah</span>
+            Neuro-Psychiatrist &amp; De-addiction Specialist in Ujjain for <span class="accent">Personalised Mental Health Care</span>
+          </h1>
           <p class="heroLede">Professional psychiatric assessment, modern psychopharmacology, certified psychotherapy and de-addiction support by Dr. Apoorv Shah (M.B.B.S., M.D., D.N.B. Psychiatry) at The Shravan Clinic.</p>
           <div class="heroActions" bis_skin_checked="1">
             <a href="tel:+919232643041" class="heroCallBtn">Call Now
@@ -690,40 +1359,50 @@
             </a>
             <p class="heroLocations">Seeing patients at <a href="#aboutDoctorSection">Sunshine Medicare, Freeganj, Ujjain</a> &amp; <a href="#aboutDoctorSection">Indore</a></p>
           </div>
+          <!-- Page 2 Feedback 1: MBBS, MD, DNB at both places & Page 6 Feedback 3: Remove unnecessary reg no from badge -->
           <div class="heroBadges" bis_skin_checked="1">
             <div class="heroBadge" bis_skin_checked="1">
-              <span class="badgeIcon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 5 5 .8-3.6 3.6.9 5.1L12 14l-4.3 2.5.9-5.1L5 7.8 10 7z"/></svg></span>
-              <span class="badgeText"><strong>M.D., D.N.B.</strong><span>Specialist Psychiatrist</span></span>
+              <span class="badgeIcon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 5 5 .8-3.6 3.6.9 5.1L12 14l-4.3 2.5.9-5.1L5 7.8 10 7z"/></svg></span>
+              <span class="badgeText"><strong>M.B.B.S., M.D., D.N.B.</strong><span>Specialist Psychiatrist</span></span>
             </div>
             <div class="heroBadge" bis_skin_checked="1">
-              <span class="badgeIcon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg></span>
-              <span class="badgeText"><strong>Reg. MP-24632</strong><span>Life Member IPS</span></span>
+              <span class="badgeIcon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg></span>
+              <span class="badgeText"><strong>Life Member IPS</strong><span>Indian Psychiatric Society</span></span>
             </div>
             <div class="heroBadge" bis_skin_checked="1">
-              <span class="badgeIcon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.7-10-9.3C.5 8.4 2.6 5 6 5c2 0 3.4 1 6 3.6C14.6 6 16 5 18 5c3.4 0 5.5 3.4 4 6.7C19.5 16.3 12 21 12 21z"/></svg></span>
+              <span class="badgeIcon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.7-10-9.3C.5 8.4 2.6 5 6 5c2 0 3.4 1 6 3.6C14.6 6 16 5 18 5c3.4 0 5.5 3.4 4 6.7C19.5 16.3 12 21 12 21z"/></svg></span>
               <span class="badgeText"><strong>Adults, Teens &amp; Children</strong><span>De-Addiction &amp; Therapy</span></span>
             </div>
           </div>
         </div>
+        <!-- Page 1 Feedback 3: Add 2 images on this page using clinic consultation desk image -->
         <div class="heroMedia" bis_skin_checked="1">
           <div class="heroBlob" aria-hidden="true" bis_skin_checked="1"></div>
           <div class="heroSlider" bis_skin_checked="1">
-            <div class="heroSlide is-active" style="background-image:url(/images/dr-apoorv-shah.jpg)" role="img" aria-label="Dr. Apoorv Shah, Neuro-Psychiatrist at The Shravan Clinic" bis_skin_checked="1">
+            <!-- Slide 1: Clinic Consultation Desk (Page 1 PDF) -->
+            <div class="heroSlide is-active" style="background-image:url(/images/dr-apoorv-clinic-desk.jpg)" role="img" aria-label="Dr. Apoorv Shah, Consultation Desk at The Shravan Clinic" bis_skin_checked="1">
               <div class="heroDoctorTag">
                 <strong>Dr. Apoorv Shah</strong>
-                <span>M.D., D.N.B. · Consultant Neuro-Psychiatrist</span>
+                <span>M.B.B.S., M.D., D.N.B. · Consultant Neuro-Psychiatrist</span>
               </div>
             </div>
-            <div class="heroSlide" style="background-image:url(/images/dr-apoorv-shah.png)" role="img" aria-label="Dr. Apoorv Shah providing mental health support" bis_skin_checked="1">
+            <!-- Slide 2: Portrait -->
+            <div class="heroSlide" style="background-image:url(/images/dr-apoorv-shah.jpg)" role="img" aria-label="Dr. Apoorv Shah, Neuro-Psychiatrist at The Shravan Clinic" bis_skin_checked="1">
               <div class="heroDoctorTag">
                 <strong>Dr. Apoorv Shah</strong>
-                <span>The Shravan Clinic · Sunshine Medicare, Ujjain</span>
+                <span>M.B.B.S., M.D., D.N.B. · The Shravan Clinic, Ujjain</span>
               </div>
             </div>
             <div class="heroDots" bis_skin_checked="1">
-              <button class="heroDot is-active" type="button" data-hero-dot="0" aria-label="Show slide 1"></button>
-              <button class="heroDot" type="button" data-hero-dot="1" aria-label="Show slide 2"></button>
+              <button class="heroDot is-active" type="button" data-hero-dot="0" aria-label="Show Clinic Desk Photo"></button>
+              <button class="heroDot" type="button" data-hero-dot="1" aria-label="Show Doctor Portrait"></button>
             </div>
+          </div>
+          <!-- Page 2 Feedback 2: Dr. Apoorv Shah in bold below the image -->
+          <div class="heroDoctorBelowCaption">
+            <h3 class="doctorBoldBelowName">Dr. Apoorv Shah</h3>
+            <p class="doctorBoldBelowQual">M.B.B.S., M.D., D.N.B. (Psychiatry)</p>
+            <p class="doctorBoldBelowRole">Consultant Neuro-Psychiatrist &amp; De-addiction Specialist</p>
           </div>
         </div>
       </div>
@@ -865,7 +1544,7 @@
     <section id="serviceSection" class=" sectionSpace">
       <img class="bg" src="drtulikamindcare.com/images/bg2.svg" alt="" />
       <img class="bg1" src="drtulikamindcare.com/images/bg1.svg" alt="" />
-      <a class="label" href="#aboutDoctorSection">Dr. Apoorv Shah, M.D., D.N.B. Psychiatry · The Shravan Clinic</a>
+      <a class="label" href="#aboutDoctorSection">Dr. Apoorv Shah, M.B.B.S., M.D., D.N.B. Psychiatry · The Shravan Clinic</a>
       <h2 class="heading">Mental Health Support Areas</h2>
       <div class="slider" bis_skin_checked="1">
         <div class="serviceDiv " bis_skin_checked="1">
@@ -934,31 +1613,62 @@
 
 
     <section id="aboutDoctorSection" class="section sectionSpace aos-init" data-aos="fade-up" data-aos-duration="1000">
-      <div class="wallContentWrapper " bis_skin_checked="1">
-        <div class="imageDiv " bis_skin_checked="1">
+      <div class="wallContentWrapper" bis_skin_checked="1">
+        <div class="imageDiv" bis_skin_checked="1">
           <img src="drtulikamindcare.com/images/tulika-psychiatrist.png" alt="Dr. Apoorv Shah Neuro-Psychiatrist in Ujjain" />
-
+          <div class="doctorImageProfileBadge">
+            <strong>Dr. Apoorv Shah</strong>
+            <span>M.B.B.S., M.D., D.N.B. (Psychiatry)</span>
+          </div>
         </div>
-        <div class="content " bis_skin_checked="1">
+        <div class="content" bis_skin_checked="1">
           <h2 class="title">Meet Dr. Apoorv Shah</h2>
           <h3 class="nexttitle">
-            M.B.B.S., M.D., D.N.B. PSYCHIATRY | Reg. No. MP-24632
+            M.B.B.S., M.D., D.N.B. PSYCHIATRY
           </h3>
-          <p>Dr. Apoorv Shah (Reg. No. MP-24632) is a mental health professional skilled in diagnostic assessment, psychopharmacology, and a certified therapist. He completed his M.B.B.S. from GMC SSMC Rewa, M.D. in Psychiatry from Chirayu Medical College &amp; Hospital Bhopal, and D.N.B. in Psychiatry from NBEMS. Proud founder of <a href="#mainContainer">The Shravan Clinic</a>, Ujjain.</p>
-          <p>He serves as Assistant Professor at Abdul Kalam Institute of Medical Sciences, Indore, and former Senior Resident at Chirayu Medical College &amp; Hospital, Bhopal. His research on antidepressant discontinuation tapering protocols and substance dependence has been published in international peer-reviewed journals. He is NIMHANS ECHO certified in Addiction Psychopharmacology and American Heart Association BLS &amp; ACLS certified.
-          </p>
-          <p>His clinical experience includes Consultant Psychiatrist at Patidar Hospital Ujjain, Kasturba Hospital BHEL Bhopal, LakeCity Hospital Bhopal, Saharsh Hospital Ujjain, and Medical Officer at District Hospital Ujjain. He is a Life Ordinary Member of the Indian Psychiatric Society (LOM/A07/26).
-          </p>
+          <!-- Exact text from Page 3 of PDF -->
+          <p class="doctorBioIntro">Dr. Apoorv Shah, a highly accomplished and dedicated mental health professional skilled in diagnostic assessment, psychopharmacology, and a certified therapist. Dr Apoorv’s journey through academia and clinical practise has shaped him into an expert with a deep commitment to enhancing mental healthcare and advancing our understanding of Neuro-Psychiatric disorders.</p>
 
-          <dix class="highlitesSection  ">
+          <div class="aboutCredentialsGrid">
+            <!-- Academic Excellence Card -->
+            <div class="credCard academicCard">
+              <div class="credCardHeader">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#116ab2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                <h4 class="credCardTitle">ACADEMIC EXCELLENCE</h4>
+              </div>
+              <ul class="credList">
+                <li><strong>M.B.B.S.</strong> from Govt. Medical College S.S.M.C. Rewa</li>
+                <li><strong>M.D. in Psychiatry</strong> from Chirayu Medical College &amp; Hospital Bhopal</li>
+                <li><strong>D.N.B. in Psychiatry</strong> from NBEMS</li>
+                <li><strong>Certified De-Addiction specialist</strong> from NIMHANS Bangalore</li>
+                <li><strong>Certified CBT, DBT, Trauma-informed Therapist</strong></li>
+              </ul>
+            </div>
+
+            <!-- Professional Affiliation Card -->
+            <div class="credCard affiliationCard">
+              <div class="credCardHeader">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#116ab2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                <h4 class="credCardTitle">PROFESSIONAL AFFILIATION</h4>
+              </div>
+              <ul class="credList">
+                <li>He serves as <strong>Assistant Professor</strong> at Abdul Kalam Institute of Medical Sciences, Indore</li>
+                <li><strong>Ex-Senior Resident</strong> at Chirayu Medical College &amp; Hospital, Bhopal</li>
+                <li><strong>Life Ordinary Member</strong> of the Indian Psychiatric Society (LOM/A07/26)</li>
+                <li><strong>Member</strong> of Indian Medical Association (IMA)</li>
+                <li><strong>Member</strong> of Ujjain Psychiatric Society</li>
+                <li><strong>Consultant Psychiatrist</strong> at Kasturba Hospital BHEL Bhopal, LakeCity Hospital Bhopal, Patidar Hospital Ujjain, Saharsh Hospital Ujjain, and Ex-Medical Officer at District Hospital Ujjain</li>
+                <li><strong>Mental Health services available at:</strong> Jaora, Alote, Jharda, Mahidpur, Nagda, Unhel, Mahidpur Road</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="highlitesSection">
             <div class="highlites" bis_skin_checked="1">
               <div class="logoTitle" bis_skin_checked="1">
-                <h3 class="title">
-                  Alumni
-                </h3>
+                <h3 class="title">Alumni</h3>
               </div>
               <div class="logos" bis_skin_checked="1">
-        
                 <div class="logosCard" bis_skin_checked="1">
                   <img src="drtulikamindcare.com/images/professional-logos/ssmc-rewa-logo.png" alt="SSMC Rewa" />
                   <p>SSMC Rewa</p>
@@ -970,12 +1680,9 @@
               </div>
         
               <div class="logoTitle" bis_skin_checked="1">
-                <h3 class="title">
-                  Member 
-                </h3>
+                <h3 class="title">Member</h3>
               </div>
               <div class="logos" bis_skin_checked="1">
-        
                 <div class="logosCard" bis_skin_checked="1">
                   <img src="drtulikamindcare.com/images/professional-logos/ips-logo.png" alt="Indian Psychiatric Society" />
                   <p>Indian Psychiatric Society</p>
@@ -990,15 +1697,72 @@
                 </div>
               </div>
               <div class="btnDiv" bis_skin_checked="1">
-      
                 <a href="#mainContainer" class="moreBtn formAction">Consult Dr. Apoorv Shah</a>
               </div>
             </div>
-          </dix></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ========================================================
+         Research & Publications Section (Page 4 PDF)
+         ======================================================== -->
+    <section id="researchPublicationsSection" class="sectionSpace" style="background: #fbfdfe; padding: 4rem 1.5rem 3.5rem;">
+      <div style="max-width: 1200px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 2.8rem;">
+          <span style="display: inline-block; color: #116ab2; font-weight: 700; font-size: 0.92rem; letter-spacing: 1px; text-transform: uppercase; background: #e3eef8; padding: 5px 16px; border-radius: 20px; margin-bottom: 0.8rem;">Academic Excellence &amp; Evidence-Based Medicine</span>
+          <h2 style="margin: 0; font-size: 2.3rem; color: #1e2f2c; font-weight: 700; font-family: 'Barlow', sans-serif;">Research &amp; Publications</h2>
+          <p style="max-width: 680px; margin: 0.6rem auto 0; color: #55645f; font-size: 1.05rem; line-height: 1.6;">Original clinical research, comparative neurocognitive assessments, and published peer-reviewed psychiatric studies by Dr. Apoorv Shah.</p>
         </div>
 
-      
+        <div class="researchCardsGrid">
+          <!-- Research 1 -->
+          <div class="researchCardItem">
+            <div class="researchTypeBadge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              Original Research Work
+            </div>
+            <h3 class="researchItemTitle">‘Neuro-cognitive assessment of Memory, Attention-Concentration &amp; Emotional Processing in patients of Somatoform disorder and Obsessive-Compulsive disorder - A comparative study’</h3>
+            <p class="researchItemDesc">Carried out specialized research analyzing executive memory, cognitive focus, attention-concentration metrics, and emotional regulation across patients presenting with Somatoform disorder and OCD.</p>
+            <div class="researchItemFooter">
+              <span class="researchAuthorTag">Carried out research work · Dr. Apoorv Shah</span>
+            </div>
+          </div>
+
+          <!-- Research 2 -->
+          <div class="researchCardItem">
+            <div class="researchTypeBadge publishedBadge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              Published Journal Article · IJMPR
+            </div>
+            <h3 class="researchItemTitle">‘Challenges and strategies in antidepressant discontinuation for Major depressive disorder and Anxiety disorder: Rationale, Review of tapering protocols and Psychological interventions’</h3>
+            <div class="publishedMetaBlock">
+              <span class="journalBadge">International Journal of Medical and Pharmaceutical Research 6.5(2025): 971-977</span>
+              <a href="https://doi.org/10.5281/zenodo.17346630" target="_blank" rel="noopener noreferrer" class="doiLinkBadge">
+                <span>doi: 10.5281/zenodo.17346630</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Research 3 -->
+          <div class="researchCardItem">
+            <div class="researchTypeBadge publishedBadge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              Published Journal Article · IJCPR
+            </div>
+            <h3 class="researchItemTitle">‘From Prescription to Dependence: A case series on Tapentadol Dependence’</h3>
+            <div class="publishedMetaBlock">
+              <span class="journalBadge">International Journal of Current Pharmaceutical review and research 2026; 18(6); 2113-2123</span>
+              <a href="https://doi.org/10.25258/ijcpr.18.6.337" target="_blank" rel="noopener noreferrer" class="doiLinkBadge">
+                <span>doi: 10.25258/ijcpr.18.6.337</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Doctor Gallery Section (Milestones & Conferences Carousel) -->
@@ -1516,6 +2280,66 @@
       }
     </style>
 
+    <!-- ========================================================
+         Research & Publications Section (Page 4 PDF)
+         ======================================================== -->
+    <section id="researchPublicationsSection" class="sectionSpace" style="background: #fbfdfe; padding: 4rem 1.5rem 3.5rem;">
+      <div style="max-width: 1200px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 2.8rem;">
+          <span style="display: inline-block; color: #116ab2; font-weight: 700; font-size: 0.92rem; letter-spacing: 1px; text-transform: uppercase; background: #e3eef8; padding: 5px 16px; border-radius: 20px; margin-bottom: 0.8rem;">Academic Excellence &amp; Evidence-Based Medicine</span>
+          <h2 style="margin: 0; font-size: 2.3rem; color: #1e2f2c; font-weight: 700; font-family: 'Barlow', sans-serif;">Research &amp; Publications</h2>
+          <p style="max-width: 680px; margin: 0.6rem auto 0; color: #55645f; font-size: 1.05rem; line-height: 1.6;">Original clinical research, comparative neurocognitive assessments, and published peer-reviewed psychiatric studies by Dr. Apoorv Shah.</p>
+        </div>
+
+        <div class="researchCardsGrid">
+          <!-- Research 1 -->
+          <div class="researchCardItem">
+            <div class="researchTypeBadge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              Original Research Work
+            </div>
+            <h3 class="researchItemTitle">‘Neuro-cognitive assessment of Memory, Attention-Concentration &amp; Emotional Processing in patients of Somatoform disorder and Obsessive-Compulsive disorder - A comparative study’</h3>
+            <p class="researchItemDesc">Carried out specialized research analyzing executive memory, cognitive focus, attention-concentration metrics, and emotional regulation across patients presenting with Somatoform disorder and OCD.</p>
+            <div class="researchItemFooter">
+              <span class="researchAuthorTag">Carried out research work · Dr. Apoorv Shah</span>
+            </div>
+          </div>
+
+          <!-- Research 2 -->
+          <div class="researchCardItem">
+            <div class="researchTypeBadge publishedBadge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              Published Journal Article · IJMPR
+            </div>
+            <h3 class="researchItemTitle">‘Challenges and strategies in antidepressant discontinuation for Major depressive disorder and Anxiety disorder: Rationale, Review of tapering protocols and Psychological interventions’</h3>
+            <div class="publishedMetaBlock">
+              <span class="journalBadge">International Journal of Medical and Pharmaceutical Research 6.5(2025): 971-977</span>
+              <a href="https://doi.org/10.5281/zenodo.17346630" target="_blank" rel="noopener noreferrer" class="doiLinkBadge">
+                <span>doi: 10.5281/zenodo.17346630</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Research 3 -->
+          <div class="researchCardItem">
+            <div class="researchTypeBadge publishedBadge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              Published Journal Article · IJCPR
+            </div>
+            <h3 class="researchItemTitle">‘From Prescription to Dependence: A case series on Tapentadol Dependence’</h3>
+            <div class="publishedMetaBlock">
+              <span class="journalBadge">International Journal of Current Pharmaceutical review and research 2026; 18(6); 2113-2123</span>
+              <a href="https://doi.org/10.25258/ijcpr.18.6.337" target="_blank" rel="noopener noreferrer" class="doiLinkBadge">
+                <span>doi: 10.25258/ijcpr.18.6.337</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Doctor Gallery Section (Milestones & Conferences Carousel) -->
     <section id="doctorGallerySection" class="sectionSpace">
       <img class="bg" src="drtulikamindcare.com/images/bg2.svg" alt="" />
@@ -1537,7 +2361,7 @@
             <article class="serviceCard galleryCardItem" data-index="0">
               <div class="galleryImgBox">
                 <span class="galleryImgBadge">ANCIPS 2026 Delhi</span>
-                <img src="images/gallery/ancips-2026-national-paper-presentation.jpg" alt="Dr. Apoorv Shah presenting comparative neurocognitive research at ANCIPS 2026 Delhi" loading="lazy" />
+                <img src="/images/gallery/ancips-2026-national-paper-presentation.jpg" alt="Dr. Apoorv Shah presenting comparative neurocognitive research at ANCIPS 2026 Delhi" loading="lazy" />
                 <div class="galleryCardOverlay">
                   <span class="galleryZoomPill">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
@@ -1556,7 +2380,7 @@
             <article class="serviceCard galleryCardItem" data-index="1">
               <div class="galleryImgBox">
                 <span class="galleryImgBadge">IAPP Mid Term CME</span>
-                <img src="images/gallery/iapp-mid-term-cme-bhopal.jpg" alt="Dr. Apoorv Shah on stage at IAPP Mid Term CME Taj Lakefront Bhopal" loading="lazy" />
+                <img src="/images/gallery/iapp-mid-term-cme-bhopal.jpg" alt="Dr. Apoorv Shah on stage at IAPP Mid Term CME Taj Lakefront Bhopal" loading="lazy" />
                 <div class="galleryCardOverlay">
                   <span class="galleryZoomPill">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
@@ -1575,7 +2399,7 @@
             <article class="serviceCard galleryCardItem" data-index="2">
               <div class="galleryImgBox">
                 <span class="galleryImgBadge">MP-PSYCON 2025</span>
-                <img src="images/gallery/mp-psycon-2025-aiims-bhopal.jpg" alt="Dr. Apoorv Shah at 19th MP-PSYCON 2025 AIIMS Bhopal" loading="lazy" />
+                <img src="/images/gallery/mp-psycon-2025-aiims-bhopal.jpg" alt="Dr. Apoorv Shah at 19th MP-PSYCON 2025 AIIMS Bhopal" loading="lazy" />
                 <div class="galleryCardOverlay">
                   <span class="galleryZoomPill">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
@@ -1594,7 +2418,7 @@
             <article class="serviceCard galleryCardItem" data-index="3">
               <div class="galleryImgBox">
                 <span class="galleryImgBadge">MP-PSYCON 2024</span>
-                <img src="images/gallery/mp-psycon-award-felicitation.jpg" alt="Dr. Apoorv Shah receiving MP-PSYCON 2024 award felicitation" loading="lazy" />
+                <img src="/images/gallery/mp-psycon-award-felicitation.jpg" alt="Dr. Apoorv Shah receiving MP-PSYCON 2024 award felicitation" loading="lazy" />
                 <div class="galleryCardOverlay">
                   <span class="galleryZoomPill">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
@@ -1613,7 +2437,7 @@
             <article class="serviceCard galleryCardItem" data-index="4">
               <div class="galleryImgBox">
                 <span class="galleryImgBadge">World Mental Health Day</span>
-                <img src="images/gallery/world-mental-health-day-chirayu.jpg" alt="Dr. Apoorv Shah addressing World Mental Health Day at Chirayu Medical College" loading="lazy" />
+                <img src="/images/gallery/world-mental-health-day-chirayu.jpg" alt="Dr. Apoorv Shah addressing World Mental Health Day at Chirayu Medical College" loading="lazy" />
                 <div class="galleryCardOverlay">
                   <span class="galleryZoomPill">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
@@ -1632,7 +2456,7 @@
             <article class="serviceCard galleryCardItem" data-index="5">
               <div class="galleryImgBox">
                 <span class="galleryImgBadge">CIPCON 2022</span>
-                <img src="images/gallery/cipcon-talk-dr-apoorv.jpg" alt="Dr. Apoorv Shah addressing the podium at CIPCON-2022 conference" loading="lazy" />
+                <img src="/images/gallery/cipcon-talk-dr-apoorv.jpg" alt="Dr. Apoorv Shah addressing the podium at CIPCON-2022 conference" loading="lazy" />
                 <div class="galleryCardOverlay">
                   <span class="galleryZoomPill">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
@@ -1651,7 +2475,7 @@
             <article class="serviceCard galleryCardItem" data-index="6">
               <div class="galleryImgBox">
                 <span class="galleryImgBadge">IPS Central Zone</span>
-                <img src="images/gallery/ips-central-zone-stage.jpg" alt="Dr. Apoorv Shah stage presentation on Positive Mental Health" loading="lazy" />
+                <img src="/images/gallery/ips-central-zone-stage.jpg" alt="Dr. Apoorv Shah stage presentation on Positive Mental Health" loading="lazy" />
                 <div class="galleryCardOverlay">
                   <span class="galleryZoomPill">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
@@ -1670,7 +2494,7 @@
             <article class="serviceCard galleryCardItem" data-index="7">
               <div class="galleryImgBox">
                 <span class="galleryImgBadge">YPCON 2023</span>
-                <img src="images/gallery/ypcon-young-psychiatrists-conf.jpg" alt="Dr. Apoorv Shah presenting research paper at YPCON-2023" loading="lazy" />
+                <img src="/images/gallery/ypcon-young-psychiatrists-conf.jpg" alt="Dr. Apoorv Shah presenting research paper at YPCON-2023" loading="lazy" />
                 <div class="galleryCardOverlay">
                   <span class="galleryZoomPill">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
@@ -1689,7 +2513,7 @@
             <article class="serviceCard galleryCardItem" data-index="8">
               <div class="galleryImgBox">
                 <span class="galleryImgBadge">YPCON National Conf</span>
-                <img src="images/gallery/ypcon-national-session-panel.jpg" alt="YPCON scientific session and panel deliberations" loading="lazy" />
+                <img src="/images/gallery/ypcon-national-session-panel.jpg" alt="YPCON scientific session and panel deliberations" loading="lazy" />
                 <div class="galleryCardOverlay">
                   <span class="galleryZoomPill">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
@@ -1708,7 +2532,7 @@
             <article class="serviceCard galleryCardItem" data-index="9">
               <div class="galleryImgBox">
                 <span class="galleryImgBadge">Chirayu Medical College</span>
-                <img src="images/gallery/psychiatry-faculty-team.jpg" alt="Department of Psychiatry clinical faculty and doctors" loading="lazy" />
+                <img src="/images/gallery/psychiatry-faculty-team.jpg" alt="Department of Psychiatry clinical faculty and doctors" loading="lazy" />
                 <div class="galleryCardOverlay">
                   <span class="galleryZoomPill">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
@@ -1766,7 +2590,7 @@
           <button type="button" class="galleryStageBtn prev" id="modalPrevBtn" aria-label="Previous image">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
           </button>
-          <img class="galleryModalImage" id="modalMainImg" src="images/gallery/ancips-2026-national-paper-presentation.jpg" alt="Gallery preview" />
+          <img class="galleryModalImage" id="modalMainImg" src="/images/gallery/ancips-2026-national-paper-presentation.jpg" alt="Gallery preview" />
           <button type="button" class="galleryStageBtn next" id="modalNextBtn" aria-label="Next image">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
           </button>
@@ -1778,34 +2602,34 @@
         </div>
         <div class="galleryModalThumbs" id="modalThumbContainer">
           <button type="button" class="galleryThumbItem is-active" data-index="0" aria-label="Thumbnail 1">
-            <img src="images/gallery/ancips-2026-national-paper-presentation.jpg" alt="Thumb 1" />
+            <img src="/images/gallery/ancips-2026-national-paper-presentation.jpg" alt="Thumb 1" />
           </button>
           <button type="button" class="galleryThumbItem" data-index="1" aria-label="Thumbnail 2">
-            <img src="images/gallery/iapp-mid-term-cme-bhopal.jpg" alt="Thumb 2" />
+            <img src="/images/gallery/iapp-mid-term-cme-bhopal.jpg" alt="Thumb 2" />
           </button>
           <button type="button" class="galleryThumbItem" data-index="2" aria-label="Thumbnail 3">
-            <img src="images/gallery/mp-psycon-2025-aiims-bhopal.jpg" alt="Thumb 3" />
+            <img src="/images/gallery/mp-psycon-2025-aiims-bhopal.jpg" alt="Thumb 3" />
           </button>
           <button type="button" class="galleryThumbItem" data-index="3" aria-label="Thumbnail 4">
-            <img src="images/gallery/mp-psycon-award-felicitation.jpg" alt="Thumb 4" />
+            <img src="/images/gallery/mp-psycon-award-felicitation.jpg" alt="Thumb 4" />
           </button>
           <button type="button" class="galleryThumbItem" data-index="4" aria-label="Thumbnail 5">
-            <img src="images/gallery/world-mental-health-day-chirayu.jpg" alt="Thumb 5" />
+            <img src="/images/gallery/world-mental-health-day-chirayu.jpg" alt="Thumb 5" />
           </button>
           <button type="button" class="galleryThumbItem" data-index="5" aria-label="Thumbnail 6">
-            <img src="images/gallery/cipcon-talk-dr-apoorv.jpg" alt="Thumb 6" />
+            <img src="/images/gallery/cipcon-talk-dr-apoorv.jpg" alt="Thumb 6" />
           </button>
           <button type="button" class="galleryThumbItem" data-index="6" aria-label="Thumbnail 7">
-            <img src="images/gallery/ips-central-zone-stage.jpg" alt="Thumb 7" />
+            <img src="/images/gallery/ips-central-zone-stage.jpg" alt="Thumb 7" />
           </button>
           <button type="button" class="galleryThumbItem" data-index="7" aria-label="Thumbnail 8">
-            <img src="images/gallery/ypcon-young-psychiatrists-conf.jpg" alt="Thumb 8" />
+            <img src="/images/gallery/ypcon-young-psychiatrists-conf.jpg" alt="Thumb 8" />
           </button>
           <button type="button" class="galleryThumbItem" data-index="8" aria-label="Thumbnail 9">
-            <img src="images/gallery/ypcon-national-session-panel.jpg" alt="Thumb 9" />
+            <img src="/images/gallery/ypcon-national-session-panel.jpg" alt="Thumb 9" />
           </button>
           <button type="button" class="galleryThumbItem" data-index="9" aria-label="Thumbnail 10">
-            <img src="images/gallery/psychiatry-faculty-team.jpg" alt="Thumb 10" />
+            <img src="/images/gallery/psychiatry-faculty-team.jpg" alt="Thumb 10" />
           </button>
         </div>
       </div>
@@ -1816,70 +2640,70 @@
       (function() {
         const galleryData = [
           {
-            src: "images/gallery/ancips-2026-national-paper-presentation.jpg",
+            src: "/images/gallery/ancips-2026-national-paper-presentation.jpg",
             category: "National Research Presentation",
             badge: "ANCIPS 2026 Delhi",
             title: "ANCIPS 2026 Paper Presentation",
             desc: "Presenting comparative neurocognitive research on OCD and Somatoform disorders at the 77th Annual Conference of the Indian Psychiatry Society (ANCIPS) at Yashobhoomi, New Delhi."
           },
           {
-            src: "images/gallery/iapp-mid-term-cme-bhopal.jpg",
+            src: "/images/gallery/iapp-mid-term-cme-bhopal.jpg",
             category: "State & National CME",
             badge: "IAPP Mid Term CME",
             title: "IAPP Mid Term CME Speaker",
             desc: "Addressing the stage at the Indian Association of Private Psychiatry (IAPP) Mid Term CME on suicide prevention and psychiatric challenges at Taj Lakefront, Bhopal."
           },
           {
-            src: "images/gallery/mp-psycon-2025-aiims-bhopal.jpg",
+            src: "/images/gallery/mp-psycon-2025-aiims-bhopal.jpg",
             category: "State Psychiatric Conference",
             badge: "MP-PSYCON 2025",
             title: "19th MP-PSYCON at AIIMS Bhopal",
             desc: "Attending the 19th Annual Conference of the Indian Psychiatry Society Madhya Pradesh State Branch, hosted by AIIMS Bhopal and Ideal Psychiatry Welfare Society."
           },
           {
-            src: "images/gallery/mp-psycon-award-felicitation.jpg",
+            src: "/images/gallery/mp-psycon-award-felicitation.jpg",
             category: "Academic Honor & Recognition",
             badge: "MP-PSYCON 2024",
             title: "MP-PSYCON Award Felicitation",
             desc: "Felicitated with memento of honor on stage by esteemed psychiatric leadership for clinical research contributions in psychiatry."
           },
           {
-            src: "images/gallery/world-mental-health-day-chirayu.jpg",
+            src: "/images/gallery/world-mental-health-day-chirayu.jpg",
             category: "Community & Clinical Advocacy",
             badge: "World Mental Health Day",
             title: "World Mental Health Day Keynote",
             desc: "Leading mental health awareness and suicide prevention initiatives at Chirayu Medical College & Hospital Bhopal on World Mental Health Day."
           },
           {
-            src: "images/gallery/cipcon-talk-dr-apoorv.jpg",
+            src: "/images/gallery/cipcon-talk-dr-apoorv.jpg",
             category: "IPS M.P. State & Central Zone",
             badge: "CIPCON 2022",
             title: "CIPCON Annual Conference Address",
             desc: "Keynote address on 'Mental Health & Preventive Psychiatry' at the annual conference of the Indian Psychiatric Society Central Zone Branch, Bhopal."
           },
           {
-            src: "images/gallery/ips-central-zone-stage.jpg",
+            src: "/images/gallery/ips-central-zone-stage.jpg",
             category: "State Psychiatric Conference",
             badge: "IPS Central Zone",
             title: "Positive Mental Health Keynote",
             desc: "Delivering an invited stage presentation on positive mental health paradigms, early psychiatric intervention, and preventive care strategies."
           },
           {
-            src: "images/gallery/ypcon-young-psychiatrists-conf.jpg",
+            src: "/images/gallery/ypcon-young-psychiatrists-conf.jpg",
             category: "National Research Presentation",
             badge: "YPCON 2023",
             title: "YPCON National Paper Presentation",
             desc: "Presenting original research on 'Tapentadol Dependence Syndrome: A Case Series' at the National Young Psychiatrists Conference in Bhopal."
           },
           {
-            src: "images/gallery/ypcon-national-session-panel.jpg",
+            src: "/images/gallery/ypcon-national-session-panel.jpg",
             category: "Academic Session & Panel",
             badge: "YPCON National Conf",
             title: "YPCON Scientific Session Panel",
             desc: "Engaging in scientific dialogue, psychiatric research discussions, and interactive proceedings during the National Young Psychiatrists Conference."
           },
           {
-            src: "images/gallery/psychiatry-faculty-team.jpg",
+            src: "/images/gallery/psychiatry-faculty-team.jpg",
             category: "Clinical Faculty & Team",
             badge: "Chirayu Medical College",
             title: "Department Clinical Faculty Team",
@@ -2378,17 +3202,116 @@
         </div>
       </section>
 
-      <!-- footer -->
+      <!-- ========================================================
+         Instagram Neuroscience & Mental Health Showcase (Page 7 PDF)
+         ======================================================== -->
+    <section id="instagramShowcaseSection" class="sectionSpace" style="background: #0f172a; padding: 4.5rem 1.5rem; color: #ffffff;">
+      <div style="max-width: 1200px; margin: 0 auto;">
+        <!-- Top Banner Card (exact match with Page 7 screenshot) -->
+        <div class="instaBannerCard">
+          <div class="instaProfileHeader">
+            <div class="instaHandleBadge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <span>@theshravanclinic</span>
+            </div>
+            <h2 class="instaBannerTitle">Neuroscience &amp; Mental Health on Instagram</h2>
+            <p class="instaBannerSubtitle">Explore bite-sized clinical psychoeducation, brain health reels, and recovery stories shared by Dr. Apoorv Shah.</p>
+            <a href="https://www.instagram.com/theshravanclinic/" target="_blank" rel="noopener noreferrer" class="instaFollowCtaBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              Follow @theshravanclinic ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- 2 Post Cards Grid (Page 7 format) -->
+        <div class="instaPostsGrid">
+          <!-- Post Card 1 -->
+          <article class="instaPostCard">
+            <div class="instaPostTopBar">
+              <div class="instaBrandPill">
+                <img src="/images/shravan-logo.svg" alt="Logo" style="height: 22px; width: auto;" />
+                <span>The Shravan Clinic</span>
+              </div>
+              <a href="https://wa.me/919232643041?text=Hello%20Dr.%20Apoorv%20Shah,%20I%20would%20like%20to%20book%20a%20consultation" target="_blank" rel="noopener noreferrer" class="instaBookBtn">
+                Book ↗
+              </a>
+            </div>
+            <div class="instaPostImgBox">
+              <div class="instaPostCategoryPill">
+                <span>✦ Insight</span>
+                <span style="opacity: 0.6;">|</span>
+                <span>Neuroscience</span>
+              </div>
+              <img src="/images/insta-post-1.jpg" alt="Brain health and clinical insights" />
+              <a href="https://wa.me/919232643041" target="_blank" rel="noopener noreferrer" class="instaOverlayWaBtn">
+                <img src="/images/icon/whatsapp-icon.png" alt="WhatsApp" style="width: 18px; height: 18px;" />
+                WhatsApp
+              </a>
+            </div>
+            <div class="instaPostContent">
+              <h4 class="instaPostTitle">Brain Health &amp; Personalised Psychiatry</h4>
+              <p class="instaPostExcerpt">Personalised neuro-psychiatric evaluations, brain neuroplasticity protocols, and evidence-based mental healthcare with Dr. Apoorv Shah.</p>
+              <div class="instaPostFooter">
+                <div class="instaMetrics">
+                  <span><svg width="15" height="15" viewBox="0 0 24 24" fill="#ec4899"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 1.2k</span>
+                  <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 84</span>
+                </div>
+                <a href="https://www.instagram.com/theshravanclinic/" target="_blank" rel="noopener noreferrer" class="instaViewPostLink">
+                  View Post ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post Card 2 -->
+          <article class="instaPostCard">
+            <div class="instaPostTopBar">
+              <div class="instaBrandPill">
+                <img src="/images/shravan-logo.svg" alt="Logo" style="height: 22px; width: auto;" />
+                <span>The Shravan Clinic</span>
+              </div>
+              <a href="https://wa.me/919232643041?text=Hello%20Dr.%20Apoorv%20Shah,%20I%20would%20like%20to%20book%20a%20consultation" target="_blank" rel="noopener noreferrer" class="instaBookBtn">
+                Book ↗
+              </a>
+            </div>
+            <div class="instaPostImgBox">
+              <div class="instaPostCategoryPill">
+                <span>✦ Neuromodulation</span>
+                <span style="opacity: 0.6;">|</span>
+                <span>Clinical Tech</span>
+              </div>
+              <img src="/images/insta-post-2.jpg" alt="tDCS Neuromodulation clinical session" />
+            </div>
+            <div class="instaPostContent">
+              <h4 class="instaPostTitle">tDCS Neuromodulation: What Happens in a Session?</h4>
+              <p class="instaPostExcerpt">Gentle 1.5mA microcurrent delivered to the left dorsolateral prefrontal cortex. Watch how targeted brain stimulation supports clinical recovery.</p>
+              <div class="instaPostFooter">
+                <div class="instaMetrics">
+                  <span><svg width="15" height="15" viewBox="0 0 24 24" fill="#ec4899"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 980</span>
+                  <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h6"/></svg> 64</span>
+                </div>
+                <a href="https://www.instagram.com/theshravanclinic/" target="_blank" rel="noopener noreferrer" class="instaViewPostLink">
+                  View Post ↗
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
     <footer id="footerSection" class="section">
       <img class="bg" src="/images/bg2.svg" alt="" />
 
       <!---footer Main-->
       <div id="footerMain" bis_skin_checked="1">
-        <!--Logo Menu-->
+        <!--Logo Menu (Page 6 Feedback 1: Increase logo size)-->
         <div class="footerMenu" bis_skin_checked="1">
           <div class="imgDiv" bis_skin_checked="1">
-            <a href="/"><img src="/images/shravan-logo.svg" alt="The Shravan Clinic" style="max-height: 48px;" /></a>
+            <a href="/" style="display: inline-block;"><img src="/images/shravan-logo.svg" alt="The Shravan Clinic" class="footerSiteLogo" style="height: 68px; max-height: 72px; width: auto; object-fit: contain;" /></a>
           </div>
+          <p style="margin-top: 10px; font-size: 0.92rem; color: #55645f; max-width: 280px; line-height: 1.55;">Personalised Neuro-Psychiatric Assessment &amp; De-addiction Care by Dr. Apoorv Shah.</p>
         </div>
 
         <!--Company Menu-->
@@ -2396,8 +3319,9 @@
           <h5 class="title">Company</h5>
           <a href="#aboutDoctorSection">About Dr. Apoorv Shah</a>
           <a href="/en/service">Support Areas</a>
+          <a href="#researchPublicationsSection">Research &amp; Publications</a>
           <a href="#doctorGallerySection">Gallery</a>
-          <a href="javascript:void(0);" class="formAction" style="cursor: pointer;">Book Consultation</a>
+          <a href="javascript:void(0);" onclick="openInquiryDrawer(); return false;" class="formAction" style="cursor: pointer;">Book Consultation</a>
         </div>
 
         <!--Legal Menu-->
@@ -2408,27 +3332,88 @@
           <a href="/en/terms-and-conditions">Terms &amp; Conditions</a>
         </div>
 
-        <!--Doctor Info Menu-->
+        <!--Doctor Info Menu (Page 6 Feedback 2: Clickable Google Map Location)-->
         <div class="footerMenu" bis_skin_checked="1">
           <h5 class="title">Dr. Apoorv Shah</h5>
-          <p style="margin: 0; font-weight: 600; color: #1e2f2e;">The Shravan Clinic</p>
-          <p style="margin: 2px 0; color: #4a5568;">Sunshine Medicare, Freeganj, Ujjain</p>
+          <p style="margin: 0; font-weight: 700; color: #1e2f2e;">The Shravan Clinic</p>
+          <p style="margin: 4px 0;">
+            <a href="https://maps.google.com/?q=The+Shravan+Clinic+Sunshine+Medicare+Freeganj+Ujjain" target="_blank" rel="noopener noreferrer" class="clickableFooterLocation" title="Open location in Google Maps">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#116ab2" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Sunshine Medicare, Freeganj, Ujjain</span>
+              <span class="mapChip">Google Maps ↗</span>
+            </a>
+          </p>
           <p style="margin: 4px 0;"><a href="mailto:drapoorvshah@gmail.com" style="color: #116ab2; text-decoration: underline;">drapoorvshah@gmail.com</a></p>
-          <p style="margin: 4px 0;"><a href="tel:+919232643041" style="color: #116ab2; font-weight: 500;">+91 92326 43041</a> | <a href="tel:07343589464" style="color: #116ab2;">0734 - 3589464</a></p>
+          <p style="margin: 4px 0;"><a href="tel:+919232643041" style="color: #116ab2; font-weight: 600;">+91 92326 43041</a> | <a href="tel:07343589464" style="color: #116ab2;">0734 - 3589464</a></p>
           <p style="margin: 2px 0; color: #718096; font-size: 0.9rem;">Everyday 6:00 PM – 9:00 PM</p>
         </div>
-
       </div>
-      <!---footer Bottom-->
+
+      <!-- Page 6 Feedback 4: Highlight Follow us and give clickable links to insta, youtube, facebook, linkedin -->
+      <div class="footerFollowHighlightContainer">
+        <div class="footerFollowInner">
+          <span class="followHeadline">✦ Follow &amp; Connect With Us:</span>
+          <div class="followButtonsBar">
+            <a href="https://www.instagram.com/theshravanclinic/" target="_blank" rel="noopener noreferrer" class="footerSocialBtn instaPill" title="Instagram">
+              <img src="/images/icon/instagram.png" alt="Instagram" />
+              <span>Instagram</span>
+            </a>
+            <a href="https://www.youtube.com/@theshravanclinic" target="_blank" rel="noopener noreferrer" class="footerSocialBtn ytPill" title="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#ff0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <span>YouTube</span>
+            </a>
+            <a href="https://www.facebook.com/theshravanclinic" target="_blank" rel="noopener noreferrer" class="footerSocialBtn fbPill" title="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#1877f2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <span>Facebook</span>
+            </a>
+            <a href="https://www.linkedin.com/in/drapoorvshah/" target="_blank" rel="noopener noreferrer" class="footerSocialBtn inPill" title="LinkedIn">
+              <img src="/images/icon/linkedin.png" alt="LinkedIn" />
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://wa.me/919232643041?text=Hello%20Dr.%20Apoorv%20Shah,%20I%20would%20like%20to%20consult%20at%20The%20Shravan%20Clinic" target="_blank" rel="noopener noreferrer" class="footerSocialBtn waPill" title="WhatsApp">
+              <img src="/images/icon/whatsapp-icon.png" alt="WhatsApp" />
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!---footer Bottom (Page 6 Feedback 3: Removed registration number from unnecessary places)-->
       <div id="footerBottom" bis_skin_checked="1">
-        <p class="text">Copyright © 2026 The Shravan Clinic · Dr. Apoorv Shah (Reg. MP-24632)</p>
+        <p class="text">Copyright © 2026 The Shravan Clinic · Dr. Apoorv Shah</p>
         <div class="smDiv" bis_skin_checked="1">
-          <a href="https://www.instagram.com/theshravanclinic/" target="_blank" style="color: rgb(206, 167, 212); text-decoration: underline;" title="Instagram"><img src="/images/icon/instagram.png" alt="Instagram" /></a>
-          <a href="https://www.linkedin.com/in/drapoorvshah/" target="_blank" title="LinkedIn"><img src="/images/icon/linkedin.png" alt="LinkedIn" /></a>
-          <a href="https://wa.me/919232643041" target="_blank" title="WhatsApp"><img src="/images/icon/whatsapp-icon.png" alt="WhatsApp" /></a>
+          <a href="https://www.instagram.com/theshravanclinic/" target="_blank" rel="noopener noreferrer" title="Instagram"><img src="/images/icon/instagram.png" alt="Instagram" /></a>
+          <a href="https://www.linkedin.com/in/drapoorvshah/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><img src="/images/icon/linkedin.png" alt="LinkedIn" /></a>
+          <a href="https://wa.me/919232643041" target="_blank" rel="noopener noreferrer" title="WhatsApp"><img src="/images/icon/whatsapp-icon.png" alt="WhatsApp" /></a>
         </div>
       </div>
     </footer>
+
+    <!-- Floating Quick Social & Appointment Dock (Page 6 Screenshot) -->
+    <div id="floatingSocialDock" class="floatingSocialDock" aria-label="Quick Connect Social Dock">
+      <a href="https://www.instagram.com/theshravanclinic/" target="_blank" rel="noopener noreferrer" class="dockIconBtn dockInsta" title="Instagram">
+        <img src="/images/icon/instagram.png" alt="Instagram" />
+      </a>
+      <a href="https://www.facebook.com/theshravanclinic" target="_blank" rel="noopener noreferrer" class="dockIconBtn dockFb" title="Facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <a href="https://twitter.com/theshravanclinic" target="_blank" rel="noopener noreferrer" class="dockIconBtn dockTw" title="Twitter / X">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="tel:+919232643041" class="dockIconBtn dockPhone" title="Call Doctor">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+      <a href="https://wa.me/919232643041?text=Hello%20Dr.%20Apoorv%20Shah,%20I%20would%20like%20to%20consult%20at%20The%20Shravan%20Clinic" target="_blank" rel="noopener noreferrer" class="dockIconBtn dockWa" title="WhatsApp">
+        <img src="/images/icon/whatsapp-icon.png" alt="WhatsApp" />
+      </a>
+      <a href="https://www.linkedin.com/in/drapoorvshah/" target="_blank" rel="noopener noreferrer" class="dockIconBtn dockIn" title="LinkedIn">
+        <img src="/images/icon/linkedin.png" alt="LinkedIn" />
+      </a>
+      <!-- Patient Rating Badge from Page 6 -->
+      <a href="https://www.google.com/search?q=The+Shravan+Clinic+Dr+Apoorv+Shah+reviews" target="_blank" rel="noopener noreferrer" class="dockRatingBadge" title="Doctor reviews and ratings">
+        <img src="/images/doctor-social-rating.jpg" alt="Patient Ratings" />
+      </a>
+    </div>
   </main>
   <!--js-->
   <script src="code.jquery.com/jquery-3.4.1.min.js"></script>
