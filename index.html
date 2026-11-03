@@ -588,6 +588,63 @@
       font-weight: 700;
     }
 
+    
+    /* Page 2: Align doctor photo to top so it faces 'Meet Dr. Apoorv Shah' */
+    #aboutDoctorSection .wallContentWrapper {
+      align-items: flex-start !important;
+    }
+    #aboutDoctorSection .wallContentWrapper .imageDiv {
+      align-items: flex-start !important;
+      justify-content: center !important;
+      padding-top: 1.5rem !important;
+    }
+    #aboutDoctorSection .wallContentWrapper .imageDiv img {
+      margin-top: 0 !important;
+    }
+    #aboutDoctorSection .wallContentWrapper .content {
+      justify-content: flex-start !important;
+      padding-top: 1.5rem !important;
+    }
+
+    /* Floating Book Appointment Tab */
+    .floatingBookTab {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 99999;
+    }
+    .floatingBookBtn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #116ab2;
+      color: #ffffff !important;
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 13px 24px;
+      border-radius: 50px;
+      text-decoration: none !important;
+      box-shadow: 0 10px 25px rgba(17, 106, 178, 0.4);
+      transition: all 0.25s ease;
+      border: 2px solid rgba(255, 255, 255, 0.25);
+    }
+    .floatingBookBtn:hover {
+      background: #0d538c;
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(17, 106, 178, 0.55);
+    }
+    @media (max-width: 600px) {
+      .floatingBookTab {
+        bottom: 16px;
+        right: 16px;
+      }
+      .floatingBookBtn {
+        padding: 10px 18px;
+        font-size: 0.88rem;
+        gap: 8px;
+      }
+    }
+
     /* Footer Map & Follow Us Styles */
     .clickableFooterLocation {
       color: #116ab2 !important;
@@ -1146,7 +1203,7 @@
         <div class="heroContent aos-init aos-animate" data-aos="fade-up" data-aos-duration="800" bis_skin_checked="1">
           <!-- Page 1 Feedback 2: Name of Dr. Apoorv Shah highlighted at the start itself -->
           <div class="heroDoctorHighlightBadge">
-            <span class="docName">Dr. Apoorv Shah</span>
+            <span class="docName">The Shravan Clinic</span>
             <span class="docDivider"></span>
             <span class="docQual">M.B.B.S., M.D., D.N.B. (Psychiatry)</span>
           </div>
@@ -1155,7 +1212,7 @@
             <span class="doctorLeadName">Dr. Apoorv Shah</span>
             Neuro-Psychiatrist &amp; De-addiction Specialist in Ujjain for <span class="accent">Personalised Mental Health Care</span>
           </h1>
-          <p class="heroLede">Professional psychiatric assessment, modern psychopharmacology, certified psychotherapy and de-addiction support by Dr. Apoorv Shah (M.B.B.S., M.D., D.N.B. Psychiatry) at The Shravan Clinic.</p>
+          <p class="heroLede">Professional psychiatric assessment, modern psychopharmacology, certified psychotherapy and evidence-based de-addiction care at The Shravan Clinic, Ujjain.</p>
           <div class="heroActions" bis_skin_checked="1">
             <a href="tel:+919232643041" class="heroCallBtn">Call Now
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -1184,17 +1241,9 @@
           <div class="heroSlider" bis_skin_checked="1">
             <!-- Slide 1: Clinic Consultation Desk (Page 1 PDF) -->
             <div class="heroSlide is-active" style="background-image:url(/images/dr-apoorv-clinic-desk.jpg)" role="img" aria-label="Dr. Apoorv Shah, Consultation Desk at The Shravan Clinic" bis_skin_checked="1">
-              <div class="heroDoctorTag">
-                <strong>Dr. Apoorv Shah</strong>
-                <span>M.B.B.S., M.D., D.N.B. · Consultant Neuro-Psychiatrist</span>
-              </div>
             </div>
             <!-- Slide 2: Portrait -->
             <div class="heroSlide" style="background-image:url(/images/dr-apoorv-shah.jpg)" role="img" aria-label="Dr. Apoorv Shah, Neuro-Psychiatrist at The Shravan Clinic" bis_skin_checked="1">
-              <div class="heroDoctorTag">
-                <strong>Dr. Apoorv Shah</strong>
-                <span>M.B.B.S., M.D., D.N.B. · The Shravan Clinic, Ujjain</span>
-              </div>
             </div>
             <div class="heroDots" bis_skin_checked="1">
               <button class="heroDot is-active" type="button" data-hero-dot="0" aria-label="Show Clinic Desk Photo"></button>
@@ -1500,7 +1549,7 @@
                 </div>
               </div>
               <div class="btnDiv" bis_skin_checked="1">
-                <a href="#mainContainer" class="moreBtn formAction">Consult Dr. Apoorv Shah</a>
+                <a href="https://calendly.com/theshravanclinic" target="_blank" rel="noopener noreferrer" class="moreBtn" title="Book Consultation with Dr. Apoorv Shah on Calendly">Consult Dr. Apoorv Shah</a>
               </div>
             </div>
           </div>
@@ -2083,65 +2132,7 @@
       }
     </style>
 
-    <!-- ========================================================
-         Research & Publications Section (Page 4 PDF)
-         ======================================================== -->
-    <section id="researchPublicationsSection" class="sectionSpace" style="background: #fbfdfe; padding: 4rem 1.5rem 3.5rem;">
-      <div style="max-width: 1200px; margin: 0 auto;">
-        <div style="text-align: center; margin-bottom: 2.8rem;">
-          <span style="display: inline-block; color: #116ab2; font-weight: 700; font-size: 0.92rem; letter-spacing: 1px; text-transform: uppercase; background: #e3eef8; padding: 5px 16px; border-radius: 20px; margin-bottom: 0.8rem;">Academic Excellence &amp; Evidence-Based Medicine</span>
-          <h2 style="margin: 0; font-size: 2.3rem; color: #1e2f2c; font-weight: 700; font-family: 'Barlow', sans-serif;">Research &amp; Publications</h2>
-          <p style="max-width: 680px; margin: 0.6rem auto 0; color: #55645f; font-size: 1.05rem; line-height: 1.6;">Original clinical research, comparative neurocognitive assessments, and published peer-reviewed psychiatric studies by Dr. Apoorv Shah.</p>
-        </div>
 
-        <div class="researchCardsGrid">
-          <!-- Research 1 -->
-          <div class="researchCardItem">
-            <div class="researchTypeBadge">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-              Original Research Work
-            </div>
-            <h3 class="researchItemTitle">‘Neuro-cognitive assessment of Memory, Attention-Concentration &amp; Emotional Processing in patients of Somatoform disorder and Obsessive-Compulsive disorder - A comparative study’</h3>
-            <p class="researchItemDesc">Carried out specialized research analyzing executive memory, cognitive focus, attention-concentration metrics, and emotional regulation across patients presenting with Somatoform disorder and OCD.</p>
-            <div class="researchItemFooter">
-              <span class="researchAuthorTag">Carried out research work · Dr. Apoorv Shah</span>
-            </div>
-          </div>
-
-          <!-- Research 2 -->
-          <div class="researchCardItem">
-            <div class="researchTypeBadge publishedBadge">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-              Published Journal Article · IJMPR
-            </div>
-            <h3 class="researchItemTitle">‘Challenges and strategies in antidepressant discontinuation for Major depressive disorder and Anxiety disorder: Rationale, Review of tapering protocols and Psychological interventions’</h3>
-            <div class="publishedMetaBlock">
-              <span class="journalBadge">International Journal of Medical and Pharmaceutical Research 6.5(2025): 971-977</span>
-              <a href="https://doi.org/10.5281/zenodo.17346630" target="_blank" rel="noopener noreferrer" class="doiLinkBadge">
-                <span>doi: 10.5281/zenodo.17346630</span>
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Research 3 -->
-          <div class="researchCardItem">
-            <div class="researchTypeBadge publishedBadge">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-              Published Journal Article · IJCPR
-            </div>
-            <h3 class="researchItemTitle">‘From Prescription to Dependence: A case series on Tapentadol Dependence’</h3>
-            <div class="publishedMetaBlock">
-              <span class="journalBadge">International Journal of Current Pharmaceutical review and research 2026; 18(6); 2113-2123</span>
-              <a href="https://doi.org/10.25258/ijcpr.18.6.337" target="_blank" rel="noopener noreferrer" class="doiLinkBadge">
-                <span>doi: 10.25258/ijcpr.18.6.337</span>
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Doctor Gallery Section (Milestones & Conferences Carousel) -->
     <section id="doctorGallerySection" class="sectionSpace">
@@ -2994,7 +2985,7 @@
           </div>
 
           <div class="bannerInquiryWrapper" bis_skin_checked="1">
-            <a href="https://calendly.com/theshravanclinic" target="_blank" rel="noopener noreferrer" class="bannerInquiryBtn" title="Inquiry Now">
+            <a href="javascript:void(0);" onclick="openInquiryDrawer(); return false;" class="bannerInquiryBtn formAction" title="Inquiry Now">
               <span>Inquiry Now</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -3128,6 +3119,19 @@
       </div>
     </footer>
 
+    
+    <!-- Persistent Floating Book Appointment Tab -->
+    <aside id="floatingBookAppointmentTab" class="floatingBookTab" aria-label="Book Appointment">
+      <a href="https://calendly.com/theshravanclinic" target="_blank" rel="noopener noreferrer" class="floatingBookBtn" title="Book Appointment with Dr. Apoorv Shah">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <span>Book Appointment</span>
+      </a>
+    </aside>
     </main>
   <!--js-->
   <script src="code.jquery.com/jquery-3.4.1.min.js"></script>
