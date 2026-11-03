@@ -214,7 +214,38 @@
       #popupFormWrapper {
       z-index: 100;
       }
-   </style><style data-emotion="cosmos-global-global" data-s=""></style>
+   
+    /* Footer Layout Fix: Prevent Menu & Copyright Text Overlap */
+    #mainContainer #footerSection #footerMain {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: space-between !important;
+      margin-bottom: 2rem !important;
+    }
+    #mainContainer #footerSection #footerMain .footerMenu {
+      height: auto !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      margin-bottom: 2rem !important;
+    }
+    #mainContainer #footerSection #footerMain .footerMenu .imgDiv {
+      height: auto !important;
+      min-height: 70px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+      margin-bottom: 10px !important;
+    }
+    #mainContainer #footerSection #footerBottom {
+      clear: both !important;
+      width: 100% !important;
+      margin-top: 1.5rem !important;
+      padding-top: 1.5rem !important;
+      border-top: 1px solid #ebedf3 !important;
+      position: relative !important;
+    }
+</style><style data-emotion="cosmos-global-global" data-s=""></style>
   <!-- ========================================================
        PDF Feedback Corrections Styles
        ======================================================== -->
@@ -480,6 +511,8 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 30px;
+      max-width: 940px;
+      margin: 0 auto;
     }
     .instaPostCard {
       background: #1e293b;
@@ -516,14 +549,13 @@
     }
     .instaPostImgBox {
       position: relative;
-      height: 380px;
+      width: 100%;
       overflow: hidden;
-      background: #020617;
+      background: #0f172a;
     }
     .instaPostImgBox img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
       display: block;
       transition: transform 0.4s ease;
     }
@@ -2997,7 +3029,7 @@
         <!-- 2 Post Cards Grid (Clean dark-blue theme) -->
         <div class="instaPostsGrid">
           <!-- Post Card 1 -->
-          <a href="https://www.instagram.com/theshravanclinic/" target="_blank" rel="noopener noreferrer" class="instaPostCard" aria-label="Visit The Shravan Clinic on Instagram">
+          <a href="https://www.instagram.com/p/Dbul17CuOuO/" target="_blank" rel="noopener noreferrer" class="instaPostCard" aria-label="View The Shravan Clinic Instagram Post (Dbul17CuOuO)">
             <div class="instaPostTopBar">
               <div class="instaBrandPill">
                 <img src="/images/shravan-logo.svg" alt="Logo" style="height: 22px; width: auto;" />
@@ -3018,7 +3050,7 @@
           </a>
 
           <!-- Post Card 2 -->
-          <a href="https://www.instagram.com/theshravanclinic/" target="_blank" rel="noopener noreferrer" class="instaPostCard" aria-label="Visit The Shravan Clinic on Instagram">
+          <a href="https://www.instagram.com/p/Dc2w3ASI-Bq/" target="_blank" rel="noopener noreferrer" class="instaPostCard" aria-label="View The Shravan Clinic Instagram Post (Dc2w3ASI-Bq)">
             <div class="instaPostTopBar">
               <div class="instaBrandPill">
                 <img src="/images/shravan-logo.svg" alt="Logo" style="height: 22px; width: auto;" />
