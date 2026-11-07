@@ -1001,6 +1001,7 @@
   align-items: center;
   flex-wrap: wrap;
   text-align: center;
+  scroll-margin-top: 80px;
 }
 #bannerSection .content .subHeading {
   margin-top: 0.5rem;
