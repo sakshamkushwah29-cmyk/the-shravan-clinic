@@ -37,11 +37,11 @@
 
 #mainContainer {
   transition: transform 0.8s cubic-bezier(0.37, 0, 0.63, 1) !important;
-  will-change: transform;
 }
 
 .mainContainerIntro {
   transform: translateX(-650px);
+  will-change: transform;
 }
 @media (max-width: 1024px) {
   .mainContainerIntro {

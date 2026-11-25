@@ -192,7 +192,7 @@
   }
 }
 #mainContainer .headerIntro {
-  height: 4rem;
+  height: 4.5rem;
 }
 #mainContainer .headerMain {
   height: 6rem;
@@ -201,17 +201,28 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
-  width: 100vw;
+  z-index: 1000;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #ffffff;
-  transition: all 0.5s cubic-bezier(0.37, 0, 0.63, 1);
+  background-color: #ffffff !important;
+  transition: top 0.32s cubic-bezier(0.22, 1, 0.36, 1), height 0.3s ease, box-shadow 0.3s ease;
+}
+#mainContainer #headerSection.headerScrolled {
+  background-color: #ffffff !important;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.08);
+}
+#mainContainer #headerSection.headerHidden {
+  top: -115px !important;
+  box-shadow: none !important;
 }
 @media (min-width: 1024px) {
   #mainContainer #headerSection {
     height: 90px;
+  }
+  #mainContainer #headerSection.headerIntro {
+    height: 78px;
   }
 }
 #mainContainer #headerSection .logoDiv {
@@ -780,4 +791,103 @@
 }
 #mainContainer #footerSection #footerBottom .smDiv a img {
   cursor: pointer;
+}
+
+
+/* Floating Bottom-Right Dock & Full-Time WhatsApp Icon */
+.floatingDock {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  pointer-events: none;
+}
+.floatingDock > * {
+  pointer-events: auto;
+}
+.floatingDock .floatingBookTab {
+  position: relative;
+  bottom: auto;
+  right: auto;
+  z-index: auto;
+}
+.floatingWhatsappTab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.floatingWhatsappBtn {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25d366 0%, #16a34a 100%);
+  color: #ffffff !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  border: 2px solid #ffffff;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.42);
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
+  cursor: pointer !important;
+}
+.floatingWhatsappBtn * {
+  cursor: pointer !important;
+}
+.floatingWhatsappBtn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.56);
+}
+.floatingWhatsappBtn svg {
+  width: 28px;
+  height: 28px;
+  fill: #ffffff;
+  display: block;
+}
+.floatingWhatsappTooltip {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%) translateX(6px);
+  background: #0f172a;
+  color: #ffffff;
+  font-family: "Figtree", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.22);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.floatingWhatsappBtn:hover .floatingWhatsappTooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+@media (max-width: 1279px) {
+  .floatingDock {
+    bottom: calc(4rem + 14px);
+    right: 16px;
+    gap: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .floatingWhatsappBtn {
+    width: 50px;
+    height: 50px;
+  }
+  .floatingWhatsappBtn svg {
+    width: 25px;
+    height: 25px;
+  }
+  .floatingWhatsappTooltip {
+    display: none;
+  }
 }

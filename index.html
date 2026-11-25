@@ -155,9 +155,9 @@
        
       <!--css-->
       <link rel="stylesheet" href="drtulikamindcare.com/css/common.css" />
-      <link rel="stylesheet" href="drtulikamindcare.com/css/main.css" />
+      <link rel="stylesheet" href="drtulikamindcare.com/css/main.css?ver=1.25" />
       <link rel="stylesheet" href="drtulikamindcare.com/css/form.css" />
-      <link rel="stylesheet" href="drtulikamindcare.com/css/index.css" />
+      <link rel="stylesheet" href="drtulikamindcare.com/css/index.css?ver=1.25" />
     
       <link href="cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
      <!--google font link-->
@@ -3118,22 +3118,33 @@
     </footer>
 
     
-    <!-- Persistent Floating Book Appointment Tab -->
-    <aside id="floatingBookAppointmentTab" class="floatingBookTab" aria-label="Book Appointment">
-      <a href="https://calendly.com/theshravanclinic" target="_blank" rel="noopener noreferrer" class="floatingBookBtn" title="Book Appointment with Dr. Apoorv Shah">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-          <line x1="16" y1="2" x2="16" y2="6"></line>
-          <line x1="8" y1="2" x2="8" y2="6"></line>
-          <line x1="3" y1="10" x2="21" y2="10"></line>
-        </svg>
-        <span>Book Appointment</span>
-      </a>
-    </aside>
     </main>
+
+    <!-- Persistent Bottom-Right Floating Action Dock (WhatsApp + Book Appointment) -->
+    <div id="floatingBottomRightDock" class="floatingDock">
+      <aside id="floatingWhatsappTab" class="floatingWhatsappTab" aria-label="WhatsApp Consultation">
+        <a href="https://wa.me/919232643041?text=Hello%20Dr.%20Apoorv%20Shah%2C%20I%20would%20like%20to%20consult%20at%20The%20Shravan%20Clinic" target="_blank" rel="noopener noreferrer" class="floatingWhatsappBtn" title="Chat on WhatsApp" aria-label="Chat on WhatsApp with The Shravan Clinic">
+          <span class="floatingWhatsappTooltip">Chat on WhatsApp</span>
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M16.01 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.25.59 4.45 1.71 6.39L3.1 28.8l6.58-1.73a12.75 12.75 0 0 0 6.33 1.68h.01c7.06 0 12.8-5.73 12.8-12.8 0-3.42-1.33-6.64-3.75-9.05A12.72 12.72 0 0 0 16.01 3.2zm7.45 18.2c-.31.88-1.83 1.68-2.52 1.78-.65.1-1.47.14-2.37-.15-.55-.17-1.25-.41-2.15-.8-3.78-1.63-6.25-5.44-6.44-5.69-.19-.25-1.54-2.05-1.54-3.91 0-1.86.98-2.77 1.32-3.15.35-.38.76-.47 1.01-.47h.73c.23 0 .55-.09.86.66.31.76 1.07 2.62 1.16 2.81.1.19.16.41.03.66-.13.25-.19.41-.38.63-.19.22-.4.49-.57.66-.19.19-.39.39-.17.77.22.38.98 1.62 2.11 2.63 1.45 1.29 2.67 1.69 3.05 1.88.38.19.6.16.82-.1.22-.25.95-1.1 1.2-1.48.25-.38.5-.31.85-.19.35.13 2.2 1.04 2.58 1.23.38.19.63.28.72.44.1.16.1.92-.21 1.8z"/>
+          </svg>
+        </a>
+      </aside>
+      <aside id="floatingBookAppointmentTab" class="floatingBookTab" aria-label="Book Appointment">
+        <a href="https://calendly.com/theshravanclinic" target="_blank" rel="noopener noreferrer" class="floatingBookBtn" title="Book Appointment with Dr. Apoorv Shah">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Book Appointment</span>
+        </a>
+      </aside>
+    </div>
   <!--js-->
   <script src="code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="drtulikamindcare.com/js/common.js"></script>
+  <script src="drtulikamindcare.com/js/common.js?ver=1.25"></script>
   <script src="drtulikamindcare.com/js/form.js"></script>
   <script src="cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <script type="text/javascript" src="cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
@@ -3242,18 +3253,6 @@
         $(".subMenu").removeClass("subMenuIntro");
       });
     });
-
-    /*onScroll Function*/
-    window.onscroll = function () {
-      var headerTopDiv = document.getElementById('headerSection');
-      if (window.pageYOffset >= 10) {
-        headerTopDiv.classList.add("headerIntro");
-        headerTopDiv.classList.remove("headerMain");
-      } else {
-        headerTopDiv.classList.remove("headerIntro");
-        headerTopDiv.classList.add("headerMain");
-      }
-    };
   </script>
 
       <script>
