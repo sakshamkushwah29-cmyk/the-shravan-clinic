@@ -177,8 +177,13 @@
   display: flex;
   flex-direction: column;
   transition: all 1s cubic-bezier(0.37, 0, 0.63, 1);
-  padding-bottom: 4.768rem;
+  padding-bottom: 0;
   /* Header Section*/
+}
+@media (max-width: 1023px) {
+  .pageMargin {
+    padding-top: 74px !important;
+  }
 }
 @media (min-width: 768px) {
   #mainContainer {
@@ -192,10 +197,10 @@
   }
 }
 #mainContainer .headerIntro {
-  height: 4.5rem;
+  height: 66px;
 }
 #mainContainer .headerMain {
-  height: 6rem;
+  height: 74px;
 }
 #mainContainer #headerSection {
   position: fixed;
@@ -227,7 +232,7 @@
 }
 #mainContainer #headerSection .logoDiv {
   width: auto;
-  min-width: 110px;
+  min-width: 68px;
   display: inline-flex;
   align-items: center;
   z-index: 10;
@@ -242,6 +247,13 @@
   max-height: 70px;
   width: auto;
   object-fit: contain;
+}
+@media (max-width: 767px) {
+  #mainContainer #headerSection .logoDiv img,
+  .mainSiteLogo {
+    height: 46px !important;
+    max-height: 48px !important;
+  }
 }
 #mainContainer #headerSection .menuSectionIntro {
   transform: none !important;
@@ -503,23 +515,30 @@
   width: 80%;
 }
 #mainContainer #headerSection #tabMenu {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  position: relative;
+  bottom: auto;
+  left: auto;
   z-index: 101;
-  width: 100%;
-  max-width: 100%;
-  height: 4rem;
+  width: auto;
+  max-width: none;
+  height: auto;
   display: flex;
-  background-color: #ffffff;
-  box-shadow: rgba(0, 0, 0, 0.034) 0px -1px 2px 0px;
-  transform: all 0.3s ease-in;
+  align-items: center;
+  gap: 6px;
+  background-color: transparent;
+  box-shadow: none;
+}
+@media (min-width: 768px) {
+  #mainContainer #headerSection #tabMenu {
+    gap: 8px;
+  }
 }
 @media (min-width: 1280px) {
   #mainContainer #headerSection #tabMenu {
     position: relative;
     width: auto;
     height: auto;
+    gap: 0;
     overflow: unset;
     transform: none;
     border: none;
@@ -528,6 +547,8 @@
 }
 #mainContainer #headerSection #tabMenu .contactMenu {
   display: flex;
+  align-items: center;
+  gap: 6px;
 }
 @media (min-width: 1280px) {
   #mainContainer #headerSection #tabMenu .contactMenu {
@@ -538,23 +559,31 @@
 #mainContainer #headerSection #tabMenu .contactMenu #callBtn {
   background-color: #116ab2;
   background: linear-gradient(to right top, #1a7ac4, #1874bc, #166eb4, #1468ac, #1262a4, #105c9c, #0e5694, #0c508c, #0a4a84, #08447c, #063e74, #04386c);
+  border-color: #116ab2;
 }
 #mainContainer #headerSection #tabMenu .contactMenu a {
-  width: 3rem;
-  display: flex;
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  border-right: 1px solid #ebedf3;
+  border-radius: 10px;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  flex-shrink: 0;
 }
 @media (min-width: 568px) {
   #mainContainer #headerSection #tabMenu .contactMenu a {
-    width: 4rem;
+    width: 38px;
+    height: 38px;
   }
 }
 @media (min-width: 1280px) {
   #mainContainer #headerSection #tabMenu .contactMenu a {
     width: auto;
+    height: auto;
     border: none;
+    background: transparent;
     justify-content: flex-end;
   }
   #mainContainer #headerSection #tabMenu .contactMenu a:nth-child(1) {
@@ -562,7 +591,9 @@
   }
 }
 #mainContainer #headerSection #tabMenu .contactMenu a img {
-  width: 20px;
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
 }
 @media (min-width: 1280px) {
   #mainContainer #headerSection #tabMenu .contactMenu a img {
@@ -596,21 +627,27 @@
   }
 }
 #mainContainer #headerSection #tabMenu .chat {
-  width: 3rem;
+  width: 34px;
+  height: 34px;
   margin: 0;
-  display: flex;
-  align-content: center;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: #0b0b0b;
   border: none;
+  flex-shrink: 0;
 }
 @media (min-width: 568px) {
   #mainContainer #headerSection #tabMenu .chat {
-    width: 4rem;
+    width: 38px;
+    height: 38px;
   }
 }
 @media (min-width: 1280px) {
   #mainContainer #headerSection #tabMenu .chat {
     width: auto;
+    height: auto;
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
     margin-left: auto;
@@ -625,30 +662,35 @@
   }
 }
 #mainContainer #headerSection #tabMenu .chat img {
-  width: 30px;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 @media (min-width: 1280px) {
   #mainContainer #headerSection #tabMenu .chat img {
     width: 30px;
+    height: 30px;
   }
 }
 #mainContainer #headerSection #tabMenu .btn1 {
-  flex: 1;
-  display: flex;
+  flex: 0 0 auto;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   margin: 0;
-  color: #0b0b0b;
-  font-size: 0.889rem;
+  color: #ffffff !important;
+  font-size: 0.8rem;
+  font-weight: 600;
   white-space: nowrap;
-  background: none;
-  border: none;
-  border-left: 1px solid #ebedf3;
-  border-radius: 0;
+  padding: 8px 13px;
+  border-radius: 50px;
+  border: 1px solid #116ab2;
+  background: linear-gradient(to right top, #1a7ac4, #1874bc, #166eb4, #1468ac, #1262a4, #105c9c, #0e5694, #0c508c, #0a4a84, #08447c, #063e74, #04386c);
 }
 @media (min-width: 1280px) {
   #mainContainer #headerSection #tabMenu .btn1 {
     color: #ffffff;
+    font-size: 0.889rem;
     margin-left: 1rem;
     border-radius: 15px;
     padding: 0.5rem 1rem;
@@ -657,12 +699,7 @@
   }
 }
 #mainContainer #headerSection #tabMenu .btn1:hover {
-  color: #0b0b0b;
-}
-@media (min-width: 1024px) {
-  #mainContainer #headerSection #tabMenu .btn1:hover {
-    color: #ffffff;
-  }
+  color: #ffffff !important;
 }
 #mainContainer #footerSection {
   padding-top: 4.768rem;
@@ -873,7 +910,7 @@
 }
 @media (max-width: 1279px) {
   .floatingDock {
-    bottom: calc(4rem + 14px);
+    bottom: 18px;
     right: 16px;
     gap: 10px;
   }
